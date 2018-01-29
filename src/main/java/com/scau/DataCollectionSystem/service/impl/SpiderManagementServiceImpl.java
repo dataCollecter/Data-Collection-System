@@ -1,6 +1,7 @@
 package com.scau.DataCollectionSystem.service.impl;
 
 import com.scau.DataCollectionSystem.dao.MongoBase;
+import com.scau.DataCollectionSystem.dao.SpiderDao;
 import com.scau.DataCollectionSystem.entity.Spider;
 import com.scau.DataCollectionSystem.service.SpiderManagementService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,7 @@ import java.util.List;
 public class SpiderManagementServiceImpl implements SpiderManagementService {
 
     @Autowired
-    private MongoBase<Spider> spiderMongoBase;
+    private SpiderDao spiderMongoBase;
 
     public SpiderManagementServiceImpl(){
 
