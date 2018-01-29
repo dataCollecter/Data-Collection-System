@@ -10,9 +10,6 @@ import org.springframework.data.mongodb.core.mapping.Field;
 @Document(collection = "Spider")
 public class Spider {
 
-    @Id
-    private String id;
-
     @Field
     private String name;
 
@@ -31,15 +28,15 @@ public class Spider {
     @Field
     private String date2;
 
-    @Field
-    private boolean enable;
+    public Spider(){}
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
+    public Spider(String name,String url,String title1,String date1,String title2,String date2){
+        this.name=name;
+        this.url=url;
+        this.title1=title1;
+        this.date1=date1;
+        this.title2=title2;
+        this.date2=date2;
     }
 
     public String getName() {
@@ -88,13 +85,5 @@ public class Spider {
 
     public void setDate2(String date2) {
         this.date2 = date2;
-    }
-
-    public boolean isEnable() {
-        return enable;
-    }
-
-    public void setEnable(boolean enable) {
-        this.enable = enable;
     }
 }

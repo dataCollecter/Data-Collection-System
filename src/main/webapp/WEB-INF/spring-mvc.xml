@@ -12,14 +12,14 @@
                         http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
 
     <!--避免IE执行AJAX时，返回JSON出现下载文件 -->
-    <bean id="mappingJacksonHttpMessageConverter"
-          class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
-        <property name="supportedMediaTypes">
-            <list>
-                <value>text/html;charset=UTF-8</value>
-            </list>
-        </property>
-    </bean>
+    <!--<bean id="mappingJacksonHttpMessageConverter"-->
+          <!--class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">-->
+        <!--<property name="supportedMediaTypes">-->
+            <!--<list>-->
+                <!--<value>text/html;charset=UTF-8</value>-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
 
     <!-- 添加注解驱动 -->
     <mvc:annotation-driven />
@@ -28,13 +28,13 @@
     <!-- 设置使用注解的类所在的包 -->
     <context:component-scan base-package="com.scau.DataCollectionSystem.controller" ></context:component-scan>
     <!-- 完成请求和注解POJO的映射 -->
-    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
-        <property name="messageConverters">
-            <list>
-                <ref bean="mappingJacksonHttpMessageConverter" /> <!-- JSON转换器 -->
-            </list>
-        </property>
-    </bean>
+    <!--<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">-->
+        <!--<property name="messageConverters">-->
+            <!--<list>-->
+                <!--<ref bean="mappingJacksonHttpMessageConverter" /> &lt;!&ndash; JSON转换器 &ndash;&gt;-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
 
     <!-- 定义跳转的文件的前后缀 ，视图模式配置   -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

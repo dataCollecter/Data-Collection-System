@@ -29,21 +29,14 @@ public class SpiderManagementServiceImpl implements SpiderManagementService {
         return spiderDao.findAll(Spider.class);
     }
 
-    public void removeSpider(String spider_name) {
-        spiderDao.remove(new Query(Criteria.where("spider_name").is(spider_name)),"spider");
+    public void removeSpider(String name) {
+        spiderDao.remove(new Query(Criteria.where("name").is(name)),Spider.class);
     }
 
-    public boolean createSpider(String spider_name, String title1, String date1, String title2, String date2) throws IOException {
-
-        Query query=new Query();
-        query.addCriteria(Criteria.where("spider_name").is(spider_name));
-        Update update=new Update();
-        update.addToSet("title1",title1);
-        update.addToSet("date1",date1);
-        update.addToSet("title2",title1);
-        update.addToSet("date2",date2);
-        spiderDao.updateFirst(query,update,"spider");
-        Runtime.getRuntime().exec("cd path && scrapy crawl test -a spider_name="+spider_name);
+    public boolean createSpider(String name, String url, String title1, String date1, String title2, String date2) throws IOException {
+        Spider spider=new Spider(name, url,title1,date1,title2,date2);
+        spiderDao.insert(spider);
+//        Runtime.getRuntime().exec("cd path && scrapy crawl test -a spider_name="+spider_name);
         return true;
     }
 
