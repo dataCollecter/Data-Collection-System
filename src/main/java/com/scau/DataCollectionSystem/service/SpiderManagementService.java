@@ -1,5 +1,6 @@
 package com.scau.DataCollectionSystem.service;
 
+import java.io.IOException;
 import java.util.List;
 
 import com.scau.DataCollectionSystem.entity.Spider;
@@ -10,5 +11,9 @@ import com.scau.DataCollectionSystem.entity.Spider;
 public interface SpiderManagementService {
 
     List<Spider> getSpiderList();
+
+    void removeSpider(String spider_name);
+
+    boolean createSpider(String name, String title1, String date1, String title2, String date2) throws IOException;
 
 }
