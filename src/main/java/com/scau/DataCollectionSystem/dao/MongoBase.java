@@ -3,6 +3,7 @@ package com.scau.DataCollectionSystem.dao;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -10,11 +11,9 @@ import java.util.List;
  */
 public interface MongoBase<T> {
 
-    long count(String collectionName);
+    long count(Query query, Class<T> entityClass);
 
     void insert(T object);
-
-    void save(T object);
 
     T findOne(Query query, Class<T> entityClass);
 
