@@ -47,6 +47,7 @@ public class daoTest {
         for (int i=0;i<4;i++){
             System.out.println(spiderList.get(i).getTitle1());
         }
+        System.out.println(spiderDao.count(new Query(),Spider.class));
     }
 
 }
