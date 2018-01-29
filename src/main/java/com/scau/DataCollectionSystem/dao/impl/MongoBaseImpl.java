@@ -1,6 +1,6 @@
-package DataCollectionSystem.dao.impl;
+package com.scau.DataCollectionSystem.dao.impl;
 
-import DataCollectionSystem.dao.MongoBase;
+import com.scau.DataCollectionSystem.dao.MongoBase;
 import com.mongodb.client.result.DeleteResult;
 import com.mongodb.client.result.UpdateResult;
 import org.springframework.beans.factory.annotation.Autowired;

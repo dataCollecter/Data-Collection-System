@@ -1,4 +1,4 @@
-package DataCollectionSystem.entity;
+package com.scau.DataCollectionSystem.entity;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

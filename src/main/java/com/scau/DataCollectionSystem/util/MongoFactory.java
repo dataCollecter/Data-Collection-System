@@ -1,4 +1,4 @@
-package DataCollectionSystem.util;
+package com.scau.DataCollectionSystem.util;
 
 import java.util.HashMap;
 import java.util.Iterator;

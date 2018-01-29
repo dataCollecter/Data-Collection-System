@@ -1,4 +1,4 @@
-package DataCollectionSystem.dao;
+package com.scau.DataCollectionSystem.dao;
 
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
