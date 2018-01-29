@@ -18,16 +18,12 @@ public class MongoBaseImpl<T> implements MongoBase<T> {
     @Autowired
     private MongoTemplate mongoTemplate;
 
-    public long count(String collectionName) {
-        return mongoTemplate.getCollection(collectionName).count();
+    public long count(Query query,Class<T> entityClass) {
+        return mongoTemplate.count(query,entityClass);
     }
 
     public void insert(T object) {
         mongoTemplate.insert(object);
-    }
-
-    public void save(T object) {
-        mongoTemplate.save(object);
     }
 
     public T findOne(Query query, Class<T> entityClass) {
