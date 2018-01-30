@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 /**
  * Created by 哲帆 on 2018.1.28.
  */
-@Document(collection = "Email")
+@Document(collection = "email")
 public class Email {
 
     @Id

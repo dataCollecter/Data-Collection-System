@@ -15,7 +15,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- 用来设置版本号 -->
-        <srping.version>4.0.2.RELEASE</srping.version>
+        <srping.version>5.0.3.RELEASE</srping.version>
         <slf4j.version>1.7.12</slf4j.version>
         <log4j.version>1.2.17</log4j.version>
     </properties>

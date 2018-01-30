@@ -12,10 +12,7 @@
   
     <!-- 读取属性文件 -->  
     <context:property-placeholder location="classpath:mongodb.properties" />  
-  
-    <!-- 启用注解支持 -->  
-    <context:annotation-config />  
-  
+
     <!-- 扫描组件包 -->  
     <context:component-scan base-package="com.scau.DataCollectionSystem.dao" />
   
@@ -40,7 +37,7 @@
         2.db-factory：相当于sessionFactory   
         3.mongoTemplate：与数据库接口交互的主要实现类   
     -->  
-    <mongo:mongo-client host="${mongo.host}" port="${mongo.port}">  
+    <mongo:mongo-client id="mongo" host="${mongo.host}" port="${mongo.port}">
         <mongo:client-options   
             connections-per-host="${mongo.connectionsPerHost}"  
             threads-allowed-to-block-for-connection-multiplier="${mongo.threadsAllowedToBlockForConnectionMultiplier}"  
@@ -50,7 +47,7 @@
             socket-timeout="${mongo.socketTimeout}"  />  
     </mongo:mongo-client>  
   
-    <mongo:db-factory id="mongoDbFactory" dbname="${mongo.dbname}" mongo-ref="mongo" />  
+    <mongo:db-factory id="mongoDbFactory" dbname="${mongo.dbname}" mongo-ref="mongo" />
   
     <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">  
         <constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />  
