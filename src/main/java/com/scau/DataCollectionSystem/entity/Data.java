@@ -3,6 +3,7 @@ package com.scau.DataCollectionSystem.entity;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
+import sun.util.locale.StringTokenIterator;
 
 import java.util.Date;
 
@@ -22,7 +23,14 @@ public class Data {
     private String spider;
 
     @Field
-    private Date date;
+    private String date;
+
+    public Data(String title, String url, String spider, String date) {
+        this.title = title;
+        this.url = url;
+        this.spider = spider;
+        this.date = date;
+    }
 
     public String getTitle() {
         return title;
@@ -48,11 +56,11 @@ public class Data {
         this.spider = spider;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
