@@ -18,8 +18,8 @@ public class MongoBaseImpl<T> implements MongoBase<T> {
     @Autowired
     private MongoTemplate mongoTemplate;
 
-    public long count(Query query,Class<T> entityClass) {
-        return mongoTemplate.count(query,entityClass);
+    public long count(Query query, Class<T> entityClass) {
+        return mongoTemplate.count(query, entityClass);
     }
 
     public void insert(T object) {
@@ -27,11 +27,11 @@ public class MongoBaseImpl<T> implements MongoBase<T> {
     }
 
     public T findOne(Query query, Class<T> entityClass) {
-        return mongoTemplate.findOne(query,entityClass);
+        return mongoTemplate.findOne(query, entityClass);
     }
 
     public List<T> find(Query query, Class<T> entityClass) {
-        return mongoTemplate.find(query,entityClass);
+        return mongoTemplate.find(query, entityClass);
     }
 
     public List<T> findAll(Class<T> entityClass) {

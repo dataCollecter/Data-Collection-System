@@ -21,10 +21,10 @@ public interface MongoBase<T> {
 
     List<T> findAll(Class<T> entityClass);
 
-    void updateFirst(Query query, Update update,Class<T> entityClass);
+    void updateFirst(Query query, Update update, Class<T> entityClass);
 
-    void updateMulti(Query query, Update update,Class<T> entityClass);
+    void updateMulti(Query query, Update update, Class<T> entityClass);
 
-    void remove(Query query,Class<T> entityClass);
+    void remove(Query query, Class<T> entityClass);
 
 }

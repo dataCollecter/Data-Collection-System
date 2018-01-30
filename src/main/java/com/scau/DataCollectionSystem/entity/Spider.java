@@ -28,15 +28,13 @@ public class Spider {
     @Field
     private String date2;
 
-    public Spider(){}
-
-    public Spider(String name,String url,String title1,String date1,String title2,String date2){
-        this.name=name;
-        this.url=url;
-        this.title1=title1;
-        this.date1=date1;
-        this.title2=title2;
-        this.date2=date2;
+    public Spider(String name, String url, String title1, String date1, String title2, String date2) {
+        this.name = name;
+        this.url = url;
+        this.title1 = title1;
+        this.date1 = date1;
+        this.title2 = title2;
+        this.date2 = date2;
     }
 
     public String getName() {

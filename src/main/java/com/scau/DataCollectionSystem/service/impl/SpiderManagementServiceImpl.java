@@ -21,7 +21,7 @@ public class SpiderManagementServiceImpl implements SpiderManagementService {
     @Autowired
     private SpiderDao spiderDao;
 
-    public SpiderManagementServiceImpl(){
+    public SpiderManagementServiceImpl() {
 
     }
 
@@ -30,11 +30,11 @@ public class SpiderManagementServiceImpl implements SpiderManagementService {
     }
 
     public void removeSpider(String name) {
-        spiderDao.remove(new Query(Criteria.where("name").is(name)),Spider.class);
+        spiderDao.remove(new Query(Criteria.where("name").is(name)), Spider.class);
     }
 
     public boolean createSpider(String name, String url, String title1, String date1, String title2, String date2) throws IOException {
-        Spider spider=new Spider(name, url,title1,date1,title2,date2);
+        Spider spider = new Spider(name, url, title1, date1, title2, date2);
         spiderDao.insert(spider);
 //        Runtime.getRuntime().exec("cd path && scrapy crawl test -a spider_name="+spider_name);
         return true;
