@@ -10,7 +10,7 @@ import java.util.Date;
 /**
  * Created by 哲帆 on 2018.1.28.
  */
-@Document(collection = "Data")
+@Document(collection = "data")
 public class Data {
 
     @Field

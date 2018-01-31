@@ -10,20 +10,28 @@ import java.util.List;
  */
 public interface MongoBase<T> {
 
-    long count(Query query, Class<T> entityClass);
+    long count(String collectionName);
 
-    void insert(T object);
+    void insert(T object, String collectionName);
+
+    void save(T object, String collectionName);
 
     T findOne(Query query, Class<T> entityClass);
 
+    T findOne(Query query, Class<T> entityClass, String collectionName);
+
     List<T> find(Query query, Class<T> entityClass);
+
+    List<T> find(Query query, Class<T> entityClass, String collectionName);
 
     List<T> findAll(Class<T> entityClass);
 
-    void updateFirst(Query query, Update update,Class<T> entityClass);
+    List<T> findAll(Class<T> entityClass, String collectionName);
 
-    void updateMulti(Query query, Update update,Class<T> entityClass);
+    void updateFirst(Query query, Update update, String collectionName);
 
-    void remove(Query query,Class<T> entityClass);
+    void updateMulti(Query query, Update update, String collectionName);
+
+    void remove(Query query, String collectionName);
 
 }
