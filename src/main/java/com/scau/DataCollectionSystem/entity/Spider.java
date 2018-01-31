@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 /**
  * Created by 哲帆 on 2018.1.28.
  */
-@Document(collection = "spider")
+@Document(collection = "Spider")
 public class Spider {
 
     @Field
@@ -27,10 +27,6 @@ public class Spider {
 
     @Field
     private String date2;
-
-    public Spider(){
-
-    }
 
     public Spider(String name, String url, String title1, String date1, String title2, String date2) {
         this.name = name;

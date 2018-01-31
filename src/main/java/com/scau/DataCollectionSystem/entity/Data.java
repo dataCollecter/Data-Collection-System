@@ -3,14 +3,13 @@ package com.scau.DataCollectionSystem.entity;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
-import sun.util.locale.StringTokenIterator;
 
 import java.util.Date;
 
 /**
  * Created by 哲帆 on 2018.1.28.
  */
-@Document(collection = "data")
+@Document(collection = "Data")
 public class Data {
 
     @Field
@@ -24,10 +23,6 @@ public class Data {
 
     @Field
     private String date;
-
-    public  Data(){
-
-    }
 
     public Data(String title, String url, String spider, String date) {
         this.title = title;
