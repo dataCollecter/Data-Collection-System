@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 /**
  * Created by 哲帆 on 2018.1.28.
  */
-@Document(collection = "email")
+@Document(collection = "Email")
 public class Email {
 
     @Field
@@ -18,6 +18,15 @@ public class Email {
 
     @Field
     private boolean enable;
+
+    public Email() {
+    }
+
+    public Email(String address, String name, boolean enable) {
+        this.address = address;
+        this.name = name;
+        this.enable = enable;
+    }
 
     public String getAddress() {
         return address;

@@ -13,6 +13,6 @@ public class UserDaoImpl extends MongoBaseImpl<User> implements UserDao{
     public User verifyLogin(String password) {
         Query query = new Query();
         query.addCriteria(new Criteria("password").is(password));
-        return this.mongoTemplate.findOne(query, User.class);
+        return this.findOne(query, User.class);
     }
 }
