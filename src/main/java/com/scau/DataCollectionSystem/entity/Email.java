@@ -19,6 +19,10 @@ public class Email {
     @Field
     private boolean enable;
 
+    public Email(){
+
+    }
+
     public Email(String address, String name, boolean enable) {
         this.address = address;
         this.name = name;

@@ -18,7 +18,7 @@ public class UserController {
 
     @RequestMapping(value = "/login")
     @ResponseBody
-    public JSONObject login(@RequestBody JSONObject json, HttpSession seeion)
+    public JSONObject login(@RequestBody JSONObject json, HttpSession session)
     {
         String password = json.getString("password");
 
@@ -27,6 +27,7 @@ public class UserController {
         if(userService.login(password))
         {
             res.put("code", 10);
+            session.setAttribute("user", 1);
         }
         else
             res.put("code", 11);

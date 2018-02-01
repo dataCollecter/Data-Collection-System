@@ -4,13 +4,13 @@ import com.scau.DataCollectionSystem.entity.Email;
 
 import java.util.List;
 
-public interface EmailService {
+public interface ContactService {
 
     /**
      * 获取联系人列表
      * @return
      */
-    public List<Email> getContacts();
+    public List<Email> getContacts(int skip, int limit);
 
     /**
      * 添加联系人

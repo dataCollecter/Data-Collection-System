@@ -2,21 +2,21 @@ package com.scau.DataCollectionSystem.service.impl;
 
 import com.scau.DataCollectionSystem.dao.impl.EmailDaoImpl;
 import com.scau.DataCollectionSystem.entity.Email;
-import com.scau.DataCollectionSystem.service.EmailService;
+import com.scau.DataCollectionSystem.service.ContactService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class EmailServiceImpl implements EmailService{
+public class ContactServiceImpl implements ContactService {
 
     @Autowired
     private EmailDaoImpl emailDao;
 
     @Override
-    public List<Email> getContacts() {
-        List<Email> resList = emailDao.findAll(Email.class);
+    public List<Email> getContacts(int skip, int limit) {
+        List<Email> resList = emailDao.getContactList(skip, limit);
         return resList;
     }
 

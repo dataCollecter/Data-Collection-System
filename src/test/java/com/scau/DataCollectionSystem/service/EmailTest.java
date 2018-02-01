@@ -14,17 +14,16 @@ import java.util.List;
 public class EmailTest {
 
     @Autowired
-    private EmailService emailService;
+    private ContactService contactService;
 
     @Test
     public void addTest()
     {
         Email newEmail = new Email();
+        newEmail.setName("C");
+        newEmail.setAddress("xyz");
 
-        newEmail.setName("chita");
-        newEmail.setAddress("email@345.com");
-
-        if(emailService.addContact(newEmail))
+        if(contactService.addContact(newEmail))
             System.out.println("成功");
         else
             System.out.println("失败");
@@ -33,7 +32,7 @@ public class EmailTest {
     @Test
     public void getTest()
     {
-        List<Email> res = emailService.getContacts();
+        List<Email> res = contactService.getContacts(3, 3);
 
         for (Email e:res) {
             System.out.println(e.getName() + " and " + e.getAddress());
@@ -43,10 +42,9 @@ public class EmailTest {
     @Test
     public void deleteTest()
     {
-        if(emailService.deleteContact("lee"))
+        if(contactService.deleteContact("lee"))
         {
             System.out.println("成功");
-            getTest();
         }
         else
             System.out.println("失败");
