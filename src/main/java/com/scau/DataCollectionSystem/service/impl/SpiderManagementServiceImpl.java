@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
+import java.io.*;
 import java.util.List;
 
 /**
@@ -36,7 +36,24 @@ public class SpiderManagementServiceImpl implements SpiderManagementService {
     public boolean createSpider(String name, String url, String title1, String date1, String title2, String date2) throws IOException {
         Spider spider = new Spider(name, url, title1, date1, title2, date2);
         spiderDao.insert(spider);
-//        Runtime.getRuntime().exec("cd path && scrapy crawl test -a spider_name="+spider_name);
+        String shpath="/start_spider/"+name+".sh";
+        String timing_path="/var/spool/cron/crontabs/hadoop";
+        String body="cd /datacollecter\nscrapy crawl spider -q spider_name="+name+"\n";
+        try {
+            FileWriter fileWriter=new FileWriter(shpath);
+            fileWriter.write(body);
+            fileWriter.close();
+            fileWriter=new FileWriter(timing_path,true);
+            PrintWriter printWriter=new PrintWriter(fileWriter);
+            printWriter.println("0 5 0/1 * *"+shpath);//暂定
+            printWriter.flush();
+            fileWriter.flush();
+            printWriter.close();
+            fileWriter.close();
+            Runtime.getRuntime().exec(shpath);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         return true;
     }
 
