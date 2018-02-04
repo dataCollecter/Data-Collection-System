@@ -27,7 +27,7 @@ public class UserController {
         if(userService.login(password))
         {
             res.put("code", 10);
-            session.setAttribute("user", 1);
+            session.setAttribute("user", System.currentTimeMillis());
         }
         else
             res.put("code", 11);
