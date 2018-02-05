@@ -45,7 +45,7 @@ public class DataController {
         return res;
     }
 
-    @RequestMapping(value = "/get")
+    @RequestMapping(value = "/query")
     @ResponseBody
     public JSONObject queryData(@RequestBody JSONObject json)
     {

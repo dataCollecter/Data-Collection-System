@@ -12,6 +12,7 @@
     <name>DataCollectionSystem</name>
     <url>http://maven.apache.org</url>
 
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- 用来设置版本号 -->
