@@ -6,7 +6,7 @@
     <display-name>Archetype Created Web Application</display-name>
 
     <welcome-file-list>
-        <welcome-file>/login.html</welcome-file>
+        <welcome-file>/WEB-INF/content/login.html</welcome-file>
     </welcome-file-list>
 
     <!-- 加载spring bean -->
