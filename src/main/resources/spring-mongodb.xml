@@ -12,10 +12,7 @@
   
     <!-- 读取属性文件 -->  
     <context:property-placeholder location="classpath:mongodb.properties" />  
-  
-    <!-- 启用注解支持 -->  
-    <context:annotation-config />  
-  
+
     <!-- 扫描组件包 -->  
     <context:component-scan base-package="com.scau.DataCollectionSystem.dao" />
   
@@ -50,7 +47,7 @@
             socket-timeout="${mongo.socketTimeout}"  />  
     </mongo:mongo-client>  
   
-    <mongo:db-factory id="mongoDbFactory" dbname="${mongo.dbname}" mongo-ref="mongo" />  
+    <mongo:db-factory id="mongoDbFactory" dbname="${mongo.dbname}" mongo-ref="mongo" />
   
     <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">  
         <constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />  

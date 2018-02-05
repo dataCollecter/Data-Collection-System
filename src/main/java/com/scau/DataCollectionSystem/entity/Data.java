@@ -3,7 +3,6 @@ package com.scau.DataCollectionSystem.entity;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
-import sun.util.locale.StringTokenIterator;
 
 import java.util.Date;
 
