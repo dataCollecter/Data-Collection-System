@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"browser-sync start --server --files './*' "
+    "start": "browser-sync start --server --files './*' ",
+    "server":"webpack-dev-server --open"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.23.6",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
   }
 }

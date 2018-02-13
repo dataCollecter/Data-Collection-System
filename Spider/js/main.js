@@ -1,25 +1,26 @@
 'use strict';
 const ajaxOptions = {
     method: 'GET',
-    timeout: 10000,
+    timeout: 5000,
     beforeSend: function() {
         myalert('success', '数据发送成功');
     },
+    contentType:"application/json",
     dataType: 'JSON',
 };
 
 let Data = (function() {
-    
+    // 缓存
     const Data = [];
-
+    // 路由 方便后期拓展,目前无多大用处
     const Router = [{
-            url: '../dataget.json'
+            url: '/data/get'
         },
         {
-            url: '../datasearch.json'
+            url: '/data/search'
         }
     ];
-
+    // 页面控制器
     const Page = {
         name: 'Data',
         init: false,
@@ -54,7 +55,7 @@ let Data = (function() {
             let dom = '';
             for (let i = (this.page - 1) * this.step; i < Data.length && i < this.page * this.step; i++) {
                 dom +=
-                    ` <tr>
+                    `<tr>
 	                <td>${i+1}</td>
 	                <td>${Data[i].source}</td>
 	                <td>${Data[i].url}</td>
@@ -70,8 +71,8 @@ let Data = (function() {
 				<div class="dataTables_info" id="${this.name}_info" role="status" aria-live="polite">${info}</div>
 		    	 <div class="dataTables_paginate pull-right paging_simple_numbers" id="${this.name}_paginate">
 		            <ul class="pagination">
-		                <li class="paginate_button previous" id="${this.name}_previous"><a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0">Previous</a></li>
-		                <li class="paginate_button next" id="${this.name}_next"><a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0">Next</a></li>
+		                <li class="paginate_button previous" id="${this.name}_previous"><a href="javascript:void(0)" aria-controls="example1" data-dt-idx="0" tabindex="0">Previous</a></li>
+		                <li class="paginate_button next" id="${this.name}_next"><a href="javascript:void(0)" aria-controls="example1" data-dt-idx="7" tabindex="0">Next</a></li>
 		            </ul>
 		        </div>`;
                 root.parent().parent().append(foot);
@@ -84,15 +85,18 @@ let Data = (function() {
         }
     }
 
-    // dom 
+    // 需要重新选择的dom节点 
     const Dom = {
         Search: $('button[data-submit=Datasearch]'),
     };
 
+    // 
     function fixed(options, data) {
 
         Router[0].resolve = function() {
 
+            //返回的不知道是json对象 还是 json字符串
+            //  目前是当成json对象没有进行转码
             data.result.forEach(function(item) {
                 Data.push(item);
             });
@@ -118,6 +122,7 @@ let Data = (function() {
         }
     }
 
+    // 发送ajax
     function ajax(options, mes) {
 
         $.ajax($.extend(options, ajaxOptions))
@@ -129,14 +134,17 @@ let Data = (function() {
                 responseHandler("error", err, mes.error);
             });
     }
+
+    // 函数拓展
     const Function = [{
         name: "search",
         mes: {
-            success: "添加成功!",
-            error: "联系人重复!"
+            success: "!",
+            error: "!"
         }
     }];
 
+    // 暴露的接口
     let self = {
         load: function(options) {
             const mes = {
@@ -162,16 +170,16 @@ let Spider = (function() {
     const Spider = [];
     // 路由
     const Router = [{
-            url: '../spiderget.json'
+            url: '/spider/get'
         },
         {
-            url: '../spidercreate.json'
+            url: '/spider/create'
         },
         {
-            url: '../spiderdelete.json'
+            url: '/spider/delete'
         },
         {
-            url: '../spiderupdate.json'
+            url: '/spider/update'
         }
     ];
     const Page = {
@@ -230,8 +238,8 @@ let Spider = (function() {
 				<div class="dataTables_info" id="${this.name}_info" role="status" aria-live="polite">${info}</div>
 		    	 <div class="dataTables_paginate pull-right paging_simple_numbers" id="${this.name}_paginate">
 		            <ul class="pagination">
-		                <li class="paginate_button previous" id="${this.name}_previous"><a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0">Previous</a></li>
-		                <li class="paginate_button next" id="${this.name}_next"><a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0">Next</a></li>
+		                <li class="paginate_button previous" id="${this.name}_previous"><a href="javascript:void(0)" aria-controls="example1" data-dt-idx="0" tabindex="0">Previous</a></li>
+		                <li class="paginate_button next" id="${this.name}_next"><a href="javascript:void(0)" aria-controls="example1" data-dt-idx="7" tabindex="0">Next</a></li>
 		            </ul>
 		        </div>`;
                 root.parent().parent().append(foot);
@@ -272,7 +280,7 @@ let Spider = (function() {
                 url2: inputs[5].value
             };
             const options = {
-                url: '../spidercreate.json',
+                url: '/spider/create',
                 data: data
             };
             self.add(options);
@@ -304,7 +312,7 @@ let Spider = (function() {
                         return;
                     } else {
                         const options = {
-                            url: '../spiderupdate.json',
+                            url: '/spider/update',
                             data: {
                                 name: name,
                                 index: index
@@ -325,7 +333,7 @@ let Spider = (function() {
                 const index = tr.index();
                 const name = tr.children('td:eq(1)');
                 const options = {
-                    url: '../spiderdelete.json',
+                    url: '/spider/delete',
                     data: {
                         name: name.text(),
                         index: index
@@ -451,13 +459,13 @@ let People = (function() {
     const People = [];
     // 路由
     const Router = [{
-            url: '../contactget.json'
+            url: '/contact/get'
         },
         {
-            url: '../contactadd.json'
+            url: '/contact/add'
         },
         {
-            url: '../contactdelete.json'
+            url: '/contact/delete'
         }
     ];
     const Page = {
@@ -512,8 +520,8 @@ let People = (function() {
 				<div class="dataTables_info" id="${this.name}_info" role="status" aria-live="polite">${info}</div>
 		    	 <div class="dataTables_paginate pull-right paging_simple_numbers" id="${this.name}_paginate">
 		            <ul class="pagination">
-		                <li class="paginate_button previous" id="${this.name}_previous"><a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0">Previous</a></li>
-		                <li class="paginate_button next" id="${this.name}_next"><a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0">Next</a></li>
+		                <li class="paginate_button previous" id="${this.name}_previous"><a href="javascript:void(0)" aria-controls="example1" data-dt-idx="0" tabindex="0">Previous</a></li>
+		                <li class="paginate_button next" id="${this.name}_next"><a href="javascript:void(0)" aria-controls="example1" data-dt-idx="7" tabindex="0">Next</a></li>
 		            </ul>
 		        </div>`;
                 root.parent().parent().append(foot);
@@ -562,7 +570,7 @@ let People = (function() {
                 return;
             }
             const options = {
-                url: '../contactadd.json',
+                url: '/contact/add',
                 data: {
                     name: inputs[0].value,
                     mail: inputs[1].value
@@ -584,7 +592,7 @@ let People = (function() {
                 const index = tr.index();
                 const name = tr.children('td:eq(1)');
                 const options = {
-                    url: '../contactdelete.json',
+                    url: '/contact/delete',
                     data: {
                         name: name.text(),
                         index: index
@@ -711,10 +719,10 @@ $(function() {
 
     (function() {
         const options = {
-            url: '../spiderget.json',
+            url: '/spider/get',
             data: {
                 pageNum: 1,
-                pageSize: 1
+                pageSize: 1000
             }
         }
         Spider.load(options);
@@ -722,10 +730,10 @@ $(function() {
 
     (function() {
         const options = {
-            url: '../contactget.json',
+            url: '/contact/get',
             data: {
                 pageNum: 1,
-                pageSize: 1
+                pageSize: 1000
             }
         }
         People.load(options);
@@ -733,10 +741,10 @@ $(function() {
 
     (function() {
         const options = {
-            url: '../dataget.json',
+            url: '/data/get',
             data: {
                 pageNum: 1,
-                pageSize: 1
+                pageSize: 1000
             }
         }
         Data.load(options);

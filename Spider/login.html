@@ -76,15 +76,20 @@
                     editMessage('error','口令不能为空!');
                     return false;
                 }
-                console.log(password);
+                
+                // 密码其实应该加密的
+                const data = {
+                    password:password
+                };
+                
                 $.ajax({
                     url:'./login.json',
-                    type: "GET",
-                    data:password,
+                    type: "POST",
+                    data:data,
                     beforeSend:function(){
-                        console.log("before");
-                       editMessage('success','验证中...');
+                        editMessage('success','验证中...');
                     },
+                    contentType:"application/json",
                     dataType:"JSON",
                     timeout:5000,
                 }).done(function(data){
