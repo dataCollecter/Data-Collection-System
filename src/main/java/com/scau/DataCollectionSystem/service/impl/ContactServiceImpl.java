@@ -15,6 +15,12 @@ public class ContactServiceImpl implements ContactService {
     private EmailDaoImpl emailDao;
 
     @Override
+    public List<Email> getAlllContacts() {
+        List<Email> resList = emailDao.getContactList();
+        return resList;
+    }
+
+    @Override
     public List<Email> getContacts(int skip, int limit) {
         List<Email> resList = emailDao.getContactList(skip, limit);
         return resList;

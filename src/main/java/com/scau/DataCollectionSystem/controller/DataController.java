@@ -23,10 +23,10 @@ public class DataController {
     @ResponseBody
     public JSONObject getData(@RequestBody JSONObject json)
     {
-        int limit = json.getInt("pageSize");
-        int skip = (json.getInt("pageNum")-1) * limit;
+//        int limit = json.getInt("pageSize");
+//        int skip = (json.getInt("pageNum")-1) * limit;
 
-        List<Data> data = dataService.getData(skip, limit);
+        List<Data> data = dataService.getAllData();
 
         JSONArray array = new JSONArray();
         for(int i=0; i<data.size(); ++i)
@@ -49,14 +49,14 @@ public class DataController {
     @ResponseBody
     public JSONObject queryData(@RequestBody JSONObject json)
     {
-        int limit = json.getInt("pageSize");
-        int skip = (json.getInt("pageNum")-1) * limit;
+//        int limit = json.getInt("pageSize");
+//        int skip = (json.getInt("pageNum")-1) * limit;
         String[] info = new String[3];
         info[0] = json.getString("source");
         info[1] = json.getString("time");
         info[2] = json.getString("key");
 
-        List<Data> data = dataService.queryData(info, skip, limit);
+        List<Data> data = dataService.queryData(info);
 
         JSONArray array = new JSONArray();
         for(int i=0; i<data.size(); ++i)

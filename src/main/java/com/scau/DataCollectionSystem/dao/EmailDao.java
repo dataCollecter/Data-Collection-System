@@ -6,6 +6,8 @@ import java.util.List;
 
 public interface EmailDao extends MongoBase<Email>{
 
+    public List<Email> getContactList();
+
     public List<Email> getContactList(int skip, int limit);
 
     public Email findContact(String name);

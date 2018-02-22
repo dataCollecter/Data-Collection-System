@@ -8,6 +8,9 @@ public interface DataService {
 
     public List<Data> getData(int skip, int limit);
 
+    public List<Data> getAllData();
+
     public List<Data> queryData(String[] info, int skip, int limit);
 
+    public List<Data> queryData(String[] info);
 }

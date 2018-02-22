@@ -12,6 +12,13 @@ import java.util.List;
 @Repository
 public class DataDaoImpl extends MongoBaseImpl<Data> implements DataDao {
 
+    @Override
+    public List<Data> getData() {
+        Query query = new Query();
+        query.with(new Sort(Sort.Direction.ASC, "_id"));
+
+        return this.find(query, Data.class);
+    }
 
     @Override
     public List<Data> getData(int skip, int limit) {
@@ -19,6 +26,26 @@ public class DataDaoImpl extends MongoBaseImpl<Data> implements DataDao {
         query.with(new Sort(Sort.Direction.ASC, "_id"));
         query.skip(skip).limit(limit);
 
+        return this.find(query, Data.class);
+    }
+
+    @Override
+    public List<Data> queryData(String[] key, String[] value,int length) {
+
+        Query query = new Query();
+
+        query.with(new Sort(Sort.Direction.ASC, "_id"));
+
+        switch (length)
+        {
+            case 1:query.addCriteria(new Criteria(key[0]).is(value[0]));
+                break;
+            case 2:query.addCriteria(Criteria.where(key[0]).is(value[0]).and(key[1]).is(value[1]));
+                break;
+            case 3:query.addCriteria(Criteria.where(key[0]).is(value[0]).and(key[1]).is(value[1]).and(key[2]).is(value[2]));
+                break;
+
+        }
         return this.find(query, Data.class);
     }
 
@@ -40,8 +67,6 @@ public class DataDaoImpl extends MongoBaseImpl<Data> implements DataDao {
                 break;
 
         }
-
-
         return this.find(query, Data.class);
     }
 

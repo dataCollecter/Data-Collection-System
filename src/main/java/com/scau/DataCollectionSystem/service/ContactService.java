@@ -10,6 +10,12 @@ public interface ContactService {
      * 获取联系人列表
      * @return
      */
+    public List<Email> getAlllContacts();
+
+    /**
+     * 获取联系人列表
+     * @return
+     */
     public List<Email> getContacts(int skip, int limit);
 
     /**

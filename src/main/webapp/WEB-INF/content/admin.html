@@ -1,29 +1,17 @@
 <!DOCTYPE html>
-<!--
-This is a starter template page. Use this page to start your new project from
-scratch. This page gets rid of all links and provides the needed markup only.
--->
 <html>
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Admin</title>
-    <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <link rel="stylesheet" href="../../css/bootstrap.min.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="../../css/font-awesome.min.css">
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="../../css/ionicons.min.css">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="../../css/AdminLTE.min.css">
-    <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
-        page. However, you can choose any other skin. Make sure you
-        apply the skin class to the body tag so the changes take effect. -->
-    <link rel="stylesheet" href="../../css/skin-blue.min.css">
-    <link rel="stylesheet" href="../../css/bootstrap3-wysihtml5.min.css">
-    <link rel="stylesheet" type="text/css" href="../../css/main.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/ionicons.min.css">
+    <link rel="stylesheet" href="./css/AdminLTE.min.css">
+    <link rel="stylesheet" href="./css/skin-blue.min.css">
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 
@@ -32,7 +20,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Main Header -->
         <header class="main-header">
             <!-- Logo -->
-            <a href="#" class="logo">
+            <a href="javscript:return false;" class="logo">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
                 <span class="logo-mini"><b class="fa fa-cloud"></b></span>
                 <!-- logo for regular state and mobile devices -->
@@ -40,7 +28,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <nav class="navbar navbar-static-top" role="navigation">
                 <!-- Sidebar toggle button-->
-                <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                <a href="javscript:return false;" class="sidebar-toggle" data-toggle="push-menu" role="button">
           
                  </a>
             </nav>
@@ -52,12 +40,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel">
                     <div class="pull-left image">
-                        <img src="../../img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                        <img src="./img/user2-160x160.jpg" class="img-circle" alt="User Image">
                     </div>
                     <div class="pull-left info">
                         <p>管理员</p>
                         <!-- Status -->
-                        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                        <a href="javscript:return false;"><i class="fa fa-circle text-success"></i> Online</a>
                     </div>
                 </div>
                 remove
@@ -65,13 +53,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <ul class="sidebar-menu" data-widget="tree">
                     <li class="header">菜单栏</li>
                     <!-- Optionally, you can add icons to the links -->
-                    <li class="active aside"><a href="#"><i class="fa fa-database"></i> <span>数据来源</span></a></li>
-                    <li class="aside"><a href="#"><i class="fa fa-cog"></i> <span>爬虫配置</span></a></li>
+                    <li class="active aside"><a href="javscript:return false;"><i class="fa fa-database"></i> <span>数据来源</span></a></li>
+                    <li class="aside"><a href="javscript:return false;"><i class="fa fa-cog"></i> <span>爬虫配置</span></a></li>
                     <li class="aside">
-                        <a href="#"><i class="fa fa-envelope"></i> <span>邮件配置</span></a>
+                        <a href="javscript:return false;"><i class="fa fa-envelope"></i> <span>邮件配置</span></a>
                     </li>
                     <li class="loginout">
-                        <a href="login.html"><i class="fa fa-power-off"></i> <span>退出</span></a>
+                        <a href="./login.html"><i class="fa fa-power-off"></i> <span>退出</span></a>
                     </li>
                 </ul>
                 <!-- /.sidebar-menu -->
@@ -113,52 +101,29 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     <button type="submit" class="btn btn-primary ">搜索</button>
                                 </div>
                             </div>
-                            <div class="col-xs-offset-1">
-                                <div class="box-body table-responsive no-padding">
-                                    <table class="table table-hover">
-                                        <tbody>
-                                            <tr>
-                                                <th>序列号</th>
-                                                <th>数据来源</th>
-                                                <th>获取时间</th>
-                                                <th>内容</th>
-                                            </tr>
-                                            <tr>
-                                                <td>183</td>
-                                                <td>John Doe</td>
-                                                <td>11-7-2014</td>
-                                                <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                                            </tr>
-                                            <tr>
-                                                <td>219</td>
-                                                <td>Alexander Pierce</td>
-                                                <td>11-7-2014</td>
-                                                <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                                            </tr>
-                                            <tr>
-                                                <td>657</td>
-                                                <td>Bob Doe</td>
-                                                <td>11-7-2014</td>
-                                                <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                                            </tr>
-                                            <tr>
-                                                <td>175</td>
-                                                <td>Mike Doe</td>
-                                                <td>11-7-2014</td>
-                                                <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <div class="col-md-offset-3 col-md-9 col-xs-offset-1 col-xs-11">
-                                        <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
-                                            <ul class="pagination">
-                                                <li class="paginate_button previous " id="example2_previous"><a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0">Previous</a></li>
-                                                <li class="paginate_button active"><a href="#" aria-controls="example2" data-dt-idx="1" tabindex="0">1</a></li>
-                                                <li class="paginate_button "><a href="#" aria-controls="example2" data-dt-idx="2" tabindex="0">2</a></li>
-                                                <li class="paginate_button "><a href="#" aria-controls="example2" data-dt-idx="3" tabindex="0">3</a></li>
-                                                <li class="paginate_button next" id="example2_next"><a href="#" aria-controls="example2" data-dt-idx="7" tabindex="0">Next</a></li>
-                                            </ul>
-                                        </div>
+                            <div class="row" style="margin-top:15px">
+                                <div class="col-md-offset-1 col-md-10 col-xs-12">
+                                    <div class="box-body table-responsive no-padding ">
+                                        <table id="Data" class="table table-hover">
+                                            <tbody>
+                                                <tr>
+                                                    <th>序列号</th>
+                                                    <th>数据来源</th>
+                                                    <th>url</th>
+                                                    <th>标题</th>
+                                                    <th>时间</th>
+                                                </tr>
+                                            </tbody>
+                                            <thead>
+                                                <tr>
+                                                    <th>序列号</th>
+                                                    <th>数据来源</th>
+                                                    <th>url</th>
+                                                    <th>标题</th>
+                                                    <th>时间</th>
+                                                </tr>
+                                            </thead>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
@@ -178,42 +143,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </div>
                             </div>
                             <!-- /.box-header -->
-                            <div class="col-xs-offset-1">
-                                <div class="box-body table-responsive no-padding">
-                                    <table class="table table-hover">
-                                        <tbody>
-                                            <tr>
-                                                <th>序列号</th>
-                                                <th>爬虫名</th>
-                                                <th>url</th>
-                                                <th>创建时间</th>
-                                                <th>修改</th>
-                                                <th>删除</th>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>xxx</td>
-                                                <td>www.baidu.com</td>
-                                                <td>2018-1-1</td>
-                                                <td>
-                                                    <button type="button" class="btn  btn-primary"><i class="fa fa-edit"></i></button>
-                                                </td>
-                                                <td>
-                                                    <button type="button" class="btn  btn-danger myremove"><i class="fa fa-remove "></i></button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <div class="col-md-offset-3 col-md-9 col-xs-offset-1 col-xs-11">
-                                        <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
-                                            <ul class="pagination">
-                                                <li class="paginate_button previous" id="example2_previous"><a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0">Previous</a></li>
-                                                <li class="paginate_button active"><a href="#" aria-controls="example2" data-dt-idx="1" tabindex="0">1</a></li>
-                                                <li class="paginate_button "><a href="#" aria-controls="example2" data-dt-idx="2" tabindex="0">2</a></li>
-                                                <li class="paginate_button "><a href="#" aria-controls="example2" data-dt-idx="3" tabindex="0">3</a></li>
-                                                <li class="paginate_button next"><a href="#" aria-controls="example2" data-dt-idx="7" tabindex="0">Next</a></li>
-                                            </ul>
-                                        </div>
+                            <div class="row" style="margin-top:15px">
+                                <div class="col-xs-offset-1 col-md-10 col-xs-12">
+                                    <div class="box-body table-responsive no-padding">
+                                        <table class="table table-hover" id="Spider">
+                                            <thead>
+                                                <tr>
+                                                    <th>序列号</th>
+                                                    <th>爬虫名</th>
+                                                    <th>url</th>
+                                                    <th>创建时间</th>
+                                                    <th>修改</th>
+                                                    <th>删除</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
@@ -223,50 +169,31 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </div>
                 </div>
                 <!-- 邮件配置 -->
-                <div class="row "  style="display: none">
+                <div class="row " style="display: none">
                     <div class="col-xs-12">
                         <div class="box box-primary">
                             <div class="box-header">
                                 <h3 class="box-title">邮件</h3>
                                 <div class="box-tools">
-                                    <button class="btn btn-success newPeople"><i class="fa fa-plus"></i> &nbsp;新建联系人</button>
+                                    <button class="btn btn-success " data-submit="Peopleadd"><i class="fa fa-plus"></i> &nbsp;新建联系人</button>
                                 </div>
                             </div>
                             <!-- /.box-header -->
-                            <div class="col-xs-offset-1">
-                                <div class="box-body table-responsive no-padding">
-                                    <table class="table table-hover">
-                                        <tbody id="mytable">
-                                            <tr>
-                                                <th>序列号</th>
-                                                <th>联系人</th>
-                                                <th>邮箱</th>
-                                                <th>发送邮件</th>
-                                                <th>删除</th>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>巴巴</td>
-                                                <td>111111111111111</td>
-                                                <td>
-                                                    <button type="button" class="btn  btn-primary sendemail"><i class="fa fa-edit "></i></button>
-                                                </td>
-                                                <td>
-                                                    <button type="button" class="btn  btn-danger myremove"><i class="fa fa-remove "></i></button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <div class="col-md-offset-3 col-md-9 col-xs-offset-1 col-xs-11">
-                                        <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
-                                            <ul class="pagination">
-                                                <li class="paginate_button previous" id="example2_previous"><a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0">Previous</a></li>
-                                                <li class="paginate_button active"><a href="#" aria-controls="example2" data-dt-idx="1" tabindex="0">1</a></li>
-                                                <li class="paginate_button "><a href="#" aria-controls="example2" data-dt-idx="2" tabindex="0">2</a></li>
-                                                <li class="paginate_button "><a href="#" aria-controls="example2" data-dt-idx="3" tabindex="0">3</a></li>
-                                                <li class="paginate_button next"><a href="#" aria-controls="example2" data-dt-idx="7" tabindex="0">Next</a></li>
-                                            </ul>
-                                        </div>
+                            <div class="row" style="margin-top:15px">
+                                <div class="col-md-offset-1 col-md-10 col-xs-12">
+                                    <div class="box-body table-responsive no-padding">
+                                        <table class="table table-hover" id="People">
+                                            <thead>
+                                                <tr>
+                                                    <th>序列号</th>
+                                                    <th>联系人</th>
+                                                    <th>邮箱</th>
+                                                    <th>删除</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
@@ -282,7 +209,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <div class="box-header">
                                 <h3 class="box-title">新建爬虫</h3>
                                 <div class="box-tools pull-right">
-                                    <button class="btn btn-box-tool myclose"><i class="fa fa-times"></i></button>
+                                    <button class="btn btn-box-tool newSpider"><i class="fa fa-times"></i></button>
                                 </div>
                                 <!-- /.box-tools -->
                             </div>
@@ -295,7 +222,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                             <b>爬虫名称</b>
                                         </div>
                                         <div class="col-md-9 col-xs-8">
-                                            <input type="text" name="" class="form-control">
+                                            <input type="text" class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-md-offset-1 col-xs-11 item">
@@ -303,7 +230,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                             <b>第一页url</b>
                                         </div>
                                         <div class="col-md-9 col-xs-8">
-                                            <input type="text" name="" class="form-control">
+                                            <input type="text" class="form-control">
                                         </div>
                                     </div>
                                 </div>
@@ -314,7 +241,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                             <b>标题一</b>
                                         </div>
                                         <div class="col-md-9 col-xs-8">
-                                            <input type="text" name="" class="form-control">
+                                            <input type="text" class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-md-offset-1 col-xs-11 item">
@@ -322,7 +249,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                             <b>url1</b>
                                         </div>
                                         <div class="col-md-9 col-xs-8">
-                                            <input type="text" name="" class="form-control">
+                                            <input type="text" class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-md-offset-1 col-xs-11 item">
@@ -330,7 +257,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                             <b>标题二</b>
                                         </div>
                                         <div class="col-md-9 col-xs-8">
-                                            <input type="text" name="" class="form-control">
+                                            <input type="text" class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-md-offset-1 col-xs-11 item">
@@ -338,102 +265,37 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                             <b>url2</b>
                                         </div>
                                         <div class="col-md-9 col-xs-8">
-                                            <input type="text" name="" class="form-control">
+                                            <input type="text" class="form-control">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="box-footer">
                                 <div class="col-md-offset-5 col-xs-offset-5">
-                                    <button class="btn btn-success">保存</button>
-                                    <button class="btn btn-danger myclose">取消</button>
+                                    <button class="btn btn-success" data-submit="Spideradd">创建</button>
+                                    <button class="btn btn-danger newSpider">取消</button>
                                 </div>
                             </div>
                         </div>
                         <!-- /.box -->
                     </div>
                 </div>
-                      <div class="row" id="myemail" style="display: none">
-        <div class="col-xs-12">
-          <div class="box box-primary">
-            <div class="box-header with-border">
-              <h3 class="box-title">发送邮件</h3>
-              <div class="box-tools pull-right">
-                                    <button class="btn btn-box-tool myemail"><i class="fa fa-times"></i></button>
-             </div>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-              <div class="form-group">
-                <input class="form-control" placeholder="To:">
-              </div>
-              <div class="form-group">
-                <input class="form-control" placeholder="Subject:">
-              </div>
-              <div class="form-group">
-                    <textarea id="compose-textarea" class="form-control" style="height: 300px">
-                      <h1><u>Heading Of Message</u></h1>
-                      <h4>Subheading</h4>
-                      <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain
-                        was born and I will give you a complete account of the system, and expound the actual teachings
-                        of the great explorer of the truth, the master-builder of human happiness. No one rejects,
-                        dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know
-                        how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again
-                        is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain,
-                        but because occasionally circumstances occur in which toil and pain can procure him some great
-                        pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise,
-                        except to obtain some advantage from it? But who has any right to find fault with a man who
-                        chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that
-                        produces no resultant pleasure? On the other hand, we denounce with righteous indignation and
-                        dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so
-                        blinded by desire, that they cannot foresee</p>
-                      <ul>
-                        <li>List item one</li>
-                        <li>List item two</li>
-                        <li>List item three</li>
-                        <li>List item four</li>
-                      </ul>
-                      <p>Thank you,</p>
-                      <p>John Doe</p>
-                    </textarea>
-              </div>
-              <div class="form-group">
-                <div class="btn btn-default btn-file">
-                  <i class="fa fa-paperclip"></i> 附件
-                  <input type="file" name="attachment">
-                </div>
-                <p class="help-block">最大32MB</p>
-              </div>
-            </div>
-            <!-- /.box-body -->
-            <div class="box-footer">
-              <div class="pull-right">
-                <button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> 发送</button>
-              </div>
-            </div>
-            <!-- /.box-footer -->
-          </div>
-          <!-- /. box -->
+                <!-- /.col -->
         </div>
-        <!-- /.col -->
-      </div>
-            </section>
-            <!-- /.content -->
-        </div>
-        <!-- /.content-wrapper -->
-        <!-- Main Footer -->
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <!-- Main Footer -->
     </div>
     <!-- ./wrapper -->
     <!-- jQuery 3 -->
-    <script src="../../js/jquery.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
     <!-- Bootstrap 3.3.7 -->
-    <script src="../../js/bootstrap.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
     <!-- AdminLTE App -->
-    <script src="../../js/adminlte.min.js"></script>
-
-    <script src="../../js/bootstrap3-wysihtml5.all.min.js"></script>
-
-    <script type="text/javascript" src="../../js/main.js"></script>
+    <script src="./js/adminlte.min.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
 </body>
 
 </html>
