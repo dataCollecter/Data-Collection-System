@@ -17,6 +17,9 @@ public class Spider {
     private String url;
 
     @Field
+    private String createDate;
+
+    @Field
     private String title1;
 
     @Field
@@ -28,9 +31,10 @@ public class Spider {
     @Field
     private String date2;
 
-    public Spider(String name, String url, String title1, String date1, String title2, String date2) {
+    public Spider(String name, String url, String createDate, String title1, String date1, String title2, String date2) {
         this.name = name;
         this.url = url;
+        this.createDate = createDate;
         this.title1 = title1;
         this.date1 = date1;
         this.title2 = title2;
@@ -51,6 +55,14 @@ public class Spider {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public String getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(String createDate) {
+        this.createDate = createDate;
     }
 
     public String getTitle1() {

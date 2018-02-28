@@ -12,13 +12,13 @@ import java.util.List;
 @Repository
 public class EmailDaoImpl extends MongoBaseImpl<Email> implements EmailDao {
 
+
     @Override
     public List<Email> getContactList() {
         Query query = new Query();
         query.with(new Sort(Sort.Direction.ASC, "_id"));
         return this.find(query, Email.class);
     }
-
     @Override
     public List<Email> getContactList(int skip, int limit) {
         Query query = new Query();

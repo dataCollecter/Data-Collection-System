@@ -12,8 +12,8 @@ public interface SpiderManagementService {
 
     List<Spider> getSpiderList();
 
-    void removeSpider(String name);
+    boolean removeSpider(String name);
 
-    boolean createSpider(String name, String url, String title1, String date1, String title2, String date2) throws IOException;
+    boolean createSpider(String name, String url, String title1, String date1, String title2, String date2);
 
 }

@@ -20,7 +20,7 @@ public class UserController {
     @ResponseBody
     public JSONObject login(@RequestBody JSONObject json, HttpSession session)
     {
-        System.out.println("enter");
+        System.out.println("enter login");
         String password = json.getString("password");
 
         JSONObject res = new JSONObject();

@@ -27,10 +27,6 @@ public class daoTest {
     @Test
     public void Test() {
         spiderDao.remove(new Query(),Spider.class);
-        spiderDao.insert(new Spider("a","2017-01-01","1","1","1","1"));
-        spiderDao.insert(new Spider("b","2017-01-01","2","1","1","1"));
-        spiderDao.insert(new Spider("c","2017-01-01","1","3","1","1"));
-        spiderDao.insert(new Spider("d","2017-01-01","1","1","4","1"));
         Spider spider=spiderDao.findOne(new Query(Criteria.where("name").is("a")),Spider.class);
         System.out.println(spider.getName()+spider.getTitle1());
         List<Spider> spiderList=spiderDao.findAll(Spider.class);

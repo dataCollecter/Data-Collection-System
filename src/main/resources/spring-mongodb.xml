@@ -37,17 +37,19 @@
         2.db-factory：相当于sessionFactory   
         3.mongoTemplate：与数据库接口交互的主要实现类   
     -->  
-    <mongo:mongo-client id="mongo" host="${mongo.host}" port="${mongo.port}">
+    <mongo:mongo-client id="mongo" host="${mongo.host}" port="${mongo.port}" credentials="${mongo.user}:${mongo.pwd}@${mongo.defaultDbName}">
         <mongo:client-options   
             connections-per-host="${mongo.connectionsPerHost}"  
             threads-allowed-to-block-for-connection-multiplier="${mongo.threadsAllowedToBlockForConnectionMultiplier}"  
             connect-timeout="${mongo.connectTimeout}"   
             max-wait-time="${mongo.maxWaitTime}"    
             socket-keep-alive="${mongo.socketKeepAlive}"  
-            socket-timeout="${mongo.socketTimeout}"  />  
+            socket-timeout="${mongo.socketTimeout}"/>
     </mongo:mongo-client>  
   
-    <mongo:db-factory id="mongoDbFactory" dbname="${mongo.dbname}" mongo-ref="mongo" />
+    <mongo:db-factory id="mongoDbFactory"
+                      dbname="${mongo.dbname}"
+                      mongo-ref="mongo"/>
   
     <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">  
         <constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />  

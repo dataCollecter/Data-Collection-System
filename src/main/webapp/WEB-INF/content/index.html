@@ -8,18 +8,18 @@
 
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./static/css/bootstrap.min.css">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./static/css/font-awesome.min.css">
     <!-- Ionicons -->
-    <link rel="stylesheet" href="./css/ionicons.min.css">
+    <link rel="stylesheet" href="./static/css/ionicons.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="./css/AdminLTE.min.css">
+    <link rel="stylesheet" href="./static/css/AdminLTE.min.css">
 
 
     <style type="text/css">
      body{
-        background: url(./img/background.jpg) 0% 50% no-repeat;
+        background: url(./static/img/background.jpg) 0% 50% no-repeat;
         background-size: 100% auto;
     }
 
@@ -27,7 +27,7 @@
     @media screen and (max-width: 768px){
       body{
 
-        background: url(./img/background.jpg) 0% 0% no-repeat;
+        background: url(./static/img/background.jpg) 0% 0% no-repeat;
         background-size: 140% auto;
       }
     }
@@ -59,11 +59,11 @@
             <!-- /.login-box-body -->
         </div>
   </div>
-        <script src="./js/jquery.min.js"></script>
+        <script src="./static/js/jquery.min.js"></script>
         <!-- Bootstrap 3.3.7 -->
-        <script src="./js/bootstrap.min.js"></script>
+        <script src="./static/js/bootstrap.min.js"></script>
         <!-- AdminLTE App -->
-        <script src="./js/adminlte.min.js"></script>
+        <script src="./static/js/adminlte.min.js"></script>
         <script type="text/javascript">
             const label = $('label');
             const input = $('#password');
@@ -84,10 +84,11 @@
                 };
                 
                 $.ajax({
-                    url:'./login',
+                    url:'../login',
                     type: "POST",
                     data:JSON.stringify(data),
                     beforeSend:function(){
+                        // this.url = "/DataCollectionSystem" + this.url;
                         editMessage('success','验证中...');
                     },
                     contentType:"application/json",
@@ -96,7 +97,7 @@
                 }).done(function(data){
                     if(data.code == '10'){
                         editMessage('success',"验证成功，1s后自动跳转!");
-                        setTimeout(function(){ window.location.href = './view/admin';},1000);
+                        setTimeout(function(){ window.location.href = './admin';},1000);
                         
                     }else{
                         editMessage('error',"口令错误!");  

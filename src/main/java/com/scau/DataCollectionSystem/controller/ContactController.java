@@ -25,7 +25,6 @@ public class ContactController {
     {
 //        int limit = json.getInt("pageSize");
 //        int skip = (json.getInt("pageNum")-1) * limit;
-
         List<Email> contacts = contactService.getAlllContacts();
 
         JSONArray array = new JSONArray();
@@ -47,6 +46,7 @@ public class ContactController {
     @ResponseBody
     public JSONObject addContact(@RequestBody JSONObject json)
     {
+        System.out.println("add");
         Email newEmail = new Email();
         newEmail.setName(json.getString("name"));
         newEmail.setAddress(json.getString("mail"));

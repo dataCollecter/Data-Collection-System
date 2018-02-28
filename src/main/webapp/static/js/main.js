@@ -1,8 +1,25 @@
 'use strict';
 const ajaxOptions = {
-    method: 'GET',
+    method: 'POST',
     timeout: 5000,
     beforeSend: function() {
+        this.url='/DataCollectionSystem' + this.url;
+        this.data = (function (string) {  
+            var obj = {}, 
+                pairs = string.split('&'), 
+                d = decodeURIComponent,
+                name, 
+                value;  
+            $.each(pairs, function (i, pair) {  
+                pair = pair.split('=');  
+                name = d(pair[0]);  
+                value = d(pair[1]);  
+                obj[name] = !obj[name] ? value : [].concat(obj[name]).concat(value);  
+            });  
+            return JSON.stringify(obj);  
+        })(this.data);  
+
+        //console.log(this.data);
         myalert('success', '数据发送成功');
     },
     contentType:"application/json",
@@ -32,7 +49,7 @@ let Data = (function() {
         previous: function() {
             $(`#${this.name}_previous`).click(function() {
                 if (Page.page <= 1) {
-                    console.log("previous");
+                    
                     return;
                 }
                 Page.page--;
@@ -42,7 +59,7 @@ let Data = (function() {
         next: function() {
             $(`#${this.name}_next`).click(function() {
                 if (Page.page >= Page.max()) {
-                    console.log("next");
+                    //
                     return;
                 }
                 Page.page++;
@@ -193,7 +210,7 @@ let Spider = (function() {
         previous: function() {
             $(`#${this.name}_previous`).click(function() {
                 if (Page.page <= 1) {
-                    console.log("previous");
+                  
                     return;
                 }
                 Page.page--;
@@ -203,7 +220,7 @@ let Spider = (function() {
         next: function() {
             $(`#${this.name}_next`).click(function() {
                 if (Page.page >= Page.max()) {
-                    console.log("next");
+                    
                     return;
                 }
                 Page.page++;
@@ -306,7 +323,6 @@ let Spider = (function() {
                     _this.addClass('btn-primary');
                     _this.html("<i class='fa fa-edit'></i>");
                     let name = td.children('input').val();
-                    console.log(name);
                     td.html(base);
                     if (name == base) {
                         return;
@@ -479,7 +495,7 @@ let People = (function() {
         previous: function() {
             $(`#${this.name}_previous`).click(function() {
                 if (Page.page <= 1) {
-                    console.log("previous");
+                  
                     return;
                 }
                 Page.page--;
@@ -489,7 +505,7 @@ let People = (function() {
         next: function() {
             $(`#${this.name}_next`).click(function() {
                 if (Page.page >= Page.max()) {
-                    console.log("next");
+                    
                     return;
                 }
                 Page.page++;
@@ -562,7 +578,7 @@ let People = (function() {
     function Add() {
 
         Dom.Save.click(function() {
-            console.log('click');
+            
             const tr = $(this).parent().parent();
             const inputs = tr.children('td').has('input').children('input');
             if (inputs[0].value == '' || inputs[1].value == '') {

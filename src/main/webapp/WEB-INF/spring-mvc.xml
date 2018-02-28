@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:p="http://www.springframework.org/schema/p"
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
@@ -25,7 +24,14 @@
 
     <!-- 添加注解驱动 -->
     <mvc:annotation-driven />
+    <!--过滤掉所有的静态资源，把静态资直接交给tomcat去处理-->
     <mvc:default-servlet-handler/>
+
+    <!--&lt;!&ndash;Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory&ndash;&gt;-->
+    <!--<mvc:resources mapping="/view/static/css/**" location="/static/css/" />-->
+    <!--<mvc:resources mapping="/view/static/fonts/**" location="/static/fonts/" />-->
+    <!--<mvc:resources mapping="/view/static/js/**" location="/static/js/" />-->
+    <!--<mvc:resources mapping="/view/static/img/**" location="/static/img/" />-->
 
     <!-- 设置使用注解的类所在的包 -->
     <context:component-scan base-package="com.scau.DataCollectionSystem.controller" ></context:component-scan>
@@ -43,5 +49,17 @@
         <property name="prefix" value="/WEB-INF/content/" />
         <property name="suffix" value=".html" />
     </bean>
+
+    <!-- 拦截器 -->
+    <mvc:interceptors>
+        <!-- 多个拦截器，顺序执行 -->
+        <!-- 登录认证拦截器 -->
+        <mvc:interceptor>
+            <mvc:mapping path="/**" />
+            <mvc:exclude-mapping path="/static/**" />
+            <mvc:exclude-mapping path="/view/static/**" />
+            <bean class="com.scau.DataCollectionSystem.interceptor.LoginInterceptor" />
+        </mvc:interceptor>
+    </mvc:interceptors>
 
 </beans>

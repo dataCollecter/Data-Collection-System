@@ -6,7 +6,7 @@
     <display-name>Archetype Created Web Application</display-name>
 
     <welcome-file-list>
-        <welcome-file>/WEB-INF/content/login.html</welcome-file>
+        <welcome-file>/WEB-INF/content/redirect.html</welcome-file>
     </welcome-file-list>
 
     <!-- 加载spring bean -->
@@ -49,6 +49,11 @@
         <servlet-name>SpringMVC</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
+
+    <!-- 设置session超时时间为5分钟 -->
+    <session-config>
+        <session-timeout>5</session-timeout>
+    </session-config>
 
     <!-- 加载log4j配置文件 -->
     <context-param>
