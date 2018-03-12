@@ -16,16 +16,22 @@ public class LoginInterceptor implements HandlerInterceptor {
         System.out.println(request.getSession().getAttribute("user"));
         // 获取访问的url
         String url = request.getRequestURI();
+//        if(url.equals("/DataCollectionSystem/WEB-INF/content/logout.html"))
+//            return true;
+
         if(url.equals("/DataCollectionSystem/"))
             return true;
+//        if(url.contains("/logout"))
+//            return true;
         if(url.contains("/index"))
             return true;
         if(url.contains("/redirect"))
             return true;
+        if(url.contains("/static"))
+            return true;
         //如果是登录
         if(url.contains("/login"))
             return true;
-
         //判断是否已登录
         HttpSession seesion = request.getSession();
         if(seesion.getAttribute("user") != null)

@@ -6,53 +6,17 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75a03b70-e57f-4206-92e9-cbdb3f0caff1" name="Default" comment="2.28 update&#10;完善细节&#10;接通所有接口&#10;增加拦截器">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/controller/SpiderController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/interceptor/LoginInterceptor.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/content/redirect.html" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+    <list default="true" id="75a03b70-e57f-4206-92e9-cbdb3f0caff1" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/filter/NoCacheFilter.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/interceptor/UrlInterceptor.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/controller/ContactController.java" afterPath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/controller/ContactController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/controller/UserController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/controller/View.java" afterPath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/controller/View.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/SpiderDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/SpiderDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/impl/EmailDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/impl/EmailDaoImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/impl/SpiderDaoIpml.java" afterPath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/impl/SpiderDaoIpml.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/entity/Spider.java" afterPath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/entity/Spider.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/service/SpiderManagementService.java" afterPath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/service/SpiderManagementService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/service/impl/SpiderManagementServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/service/impl/SpiderManagementServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mongodb.properties" afterPath="$PROJECT_DIR$/src/main/resources/mongodb.properties" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring-mongodb.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring-mongodb.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/interceptor/LoginInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/interceptor/LoginInterceptor.java" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/content/admin.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/content/admin.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/content/login.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/content/index.html" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-mvc.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-mvc.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/AdminLTE.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/AdminLTE.min.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/bootstrap.min.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/font-awesome.min.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/ionicons.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/ionicons.min.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/main.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/main.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/skin-blue.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/skin-blue.min.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/src/main/webapp/static/fonts/FontAwesome.otf" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/src/main/webapp/static/fonts/fontawesome-webfont.eot" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/src/main/webapp/static/fonts/fontawesome-webfont.svg" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/src/main/webapp/static/fonts/fontawesome-webfont.ttf" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/src/main/webapp/static/fonts/fontawesome-webfont.woff" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/src/main/webapp/static/fonts/fontawesome-webfont.woff2" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/src/main/webapp/static/fonts/glyphicons-halflings-regular.eot" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/src/main/webapp/static/fonts/glyphicons-halflings-regular.svg" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/src/main/webapp/static/fonts/glyphicons-halflings-regular.ttf" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/src/main/webapp/static/fonts/glyphicons-halflings-regular.woff" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/src/main/webapp/static/fonts/glyphicons-halflings-regular.woff2" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/background.jpg" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/background.jpg" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/background2.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/background2.png" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/user2-160x160.jpg" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/user2-160x160.jpg" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/adminlte.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/adminlte.min.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/app.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/app.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/bootstrap.min.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/jquery.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/jquery.min.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/main.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/main.js" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/scau/DataCollectionSystem/dao/daoTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/scau/DataCollectionSystem/dao/daoTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/main.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/main.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -77,93 +41,74 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="spring-mvc.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-mvc.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="53" column="22" lean-forward="false" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="redirect.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/content/redirect.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="LoginInterceptor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/interceptor/LoginInterceptor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="41" column="44" lean-forward="false" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+            <state relative-caret-position="198">
+              <caret line="14" column="52" lean-forward="false" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Data.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/entity/Data.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/service/impl/DataServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/impl/DataDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="413">
+              <caret line="28" column="23" lean-forward="true" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MongoBaseImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/impl/MongoBaseImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="382">
+              <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#994#995#0" expanded="true" />
+                <element signature="e#1054#1055#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpiderController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/controller/SpiderController.java">
+      <file leaf-file-name="spring-mvc.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-mvc.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+            <state relative-caret-position="1320">
+              <caret line="60" column="38" lean-forward="false" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpiderManagementService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/service/SpiderManagementService.java">
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="16" column="48" lean-forward="false" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SpiderManagementServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/service/impl/SpiderManagementServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="2" selection-end-line="61" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SpiderDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/SpiderDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/content/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="99" column="73" lean-forward="false" selection-start-line="99" selection-start-column="73" selection-end-line="99" selection-end-column="73" />
+            <state relative-caret-position="682">
+              <caret line="41" column="15" lean-forward="false" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -172,14 +117,26 @@
       <file leaf-file-name="View.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/controller/View.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+            <state relative-caret-position="198">
+              <caret line="13" column="23" lean-forward="false" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
               <folding>
-                <element signature="e#292#293#0" expanded="true" />
-                <element signature="e#322#323#0" expanded="true" />
-                <element signature="e#486#487#0" expanded="true" />
-                <element signature="e#519#520#0" expanded="true" />
+                <element signature="e#340#341#0" expanded="true" />
+                <element signature="e#370#371#0" expanded="true" />
+                <element signature="e#434#435#0" expanded="true" />
+                <element signature="e#464#465#0" expanded="true" />
+                <element signature="e#534#535#0" expanded="true" />
+                <element signature="e#567#568#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UrlInterceptor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/interceptor/UrlInterceptor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -190,8 +147,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -213,6 +170,10 @@
       <find>href</find>
       <find>beforeSend</find>
       <find>view</find>
+      <find>logib</find>
+      <find>console</find>
+      <find>clear session</find>
+      <find>log</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -237,9 +198,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/MongoBase.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/EmailDa.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/impl/MongoBaseImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/impl/UserDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/service/EmailService.java" />
@@ -269,25 +227,28 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/content/login.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/entity/Spider.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/impl/EmailDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/impl/SpiderDaoIpml.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/service/SpiderManagementService.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/scau/DataCollectionSystem/dao/daoTest.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/js/main.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/controller/SystemInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/interceptor/SystemInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/controller/View.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/controller/DataController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/content/admin.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/controller/ContactController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/content/index.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-mvc.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/content/redirect.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/service/impl/SpiderManagementServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/SpiderDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/interceptor/LoginInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/controller/SpiderController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/service/impl/SpiderManagementServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/impl/SpiderDaoIpml.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/content/admin.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/interceptor/UrlInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-mvc.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/entity/NoCacheFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/filter/NoCacheFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/js/main.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/interceptor/LoginInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/controller/View.java" />
       </list>
     </option>
   </component>
@@ -331,8 +292,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="361" />
-    <option name="y" value="289" />
+    <option name="x" value="287" />
+    <option name="y" value="-27" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -377,6 +338,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -394,6 +356,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -443,6 +406,24 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="DataCollectionSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataCollectionSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataCollectionSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="DataCollectionSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="filter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataCollectionSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataCollectionSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="DataCollectionSystem" type="462c0819:PsiDirectoryNode" />
               <item name="interceptor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -484,6 +465,23 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataCollectionSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataCollectionSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataCollectionSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataCollectionSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -499,8 +497,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -748,8 +744,9 @@
       <listeners />
     </configuration>
     <configuration name="Default" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.79" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/DataCollectionSystem/" />
-      <option name="UPDATING_POLICY" value="restart-server" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="HOT_SWAP_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATING_POLICY" value="hot-swap-classes" />
       <deployment>
         <artifact name="DataCollectionSystem:war">
           <settings>
@@ -881,7 +878,13 @@
       <workItem from="1519701384088" duration="15086000" />
       <workItem from="1519733618482" duration="2822000" />
       <workItem from="1519791623788" duration="27000" />
-      <workItem from="1519792174442" duration="13207000" />
+      <workItem from="1519792174442" duration="13961000" />
+      <workItem from="1520323410031" duration="374000" />
+      <workItem from="1520324622062" duration="2038000" />
+      <workItem from="1520327082709" duration="11208000" />
+      <workItem from="1520660557587" duration="5000" />
+      <workItem from="1520675881401" duration="2162000" />
+      <workItem from="1520834577068" duration="95000" />
     </task>
     <task id="LOCAL-00001" summary="测试提交">
       <created>1517218567416</created>
@@ -946,7 +949,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519289738530</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="2.28 update&#10;完善细节&#10;接通所有接口&#10;增加拦截器">
+      <created>1519814096628</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1519814096628</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -982,7 +992,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110832000" />
+    <option name="totallyTimeSpent" value="127468000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -995,32 +1005,32 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17750533" sideWeight="0.44640434" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17910448" sideWeight="0.3109691" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21512248" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34808102" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45362473" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17750533" sideWeight="0.55359566" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17910448" sideWeight="0.6890309" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21512248" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1072,7 +1082,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1081,30 +1091,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/MongoBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="19" column="52" lean-forward="true" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/DataCollectionSystem-1.0-SNAPSHOT/js/adminlte.min.js" />
-    <entry file="file://$PROJECT_DIR$/target/DataCollectionSystem-1.0-SNAPSHOT/js/main.js" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/service/ServiceTest.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/com/scau/DataCollectionSystem/service/EmailTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="638">
@@ -1153,7 +1139,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1185,7 +1170,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="12" column="72" lean-forward="false" selection-start-line="12" selection-start-column="72" selection-end-line="12" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1193,15 +1177,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="14" column="45" lean-forward="false" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/service/impl/DataServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1606">
-          <caret line="79" column="64" lean-forward="false" selection-start-line="79" selection-start-column="64" selection-end-line="79" selection-end-column="64" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1228,13 +1203,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/entity/Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/entity/Email.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -1253,15 +1221,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/impl/MongoBaseImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="36" column="19" lean-forward="false" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1269,7 +1228,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="19" column="45" lean-forward="false" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1277,25 +1235,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
           <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/impl/SpiderDaoIpml.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#627#628#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/impl/DataDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="36" column="56" lean-forward="false" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="56" />
           <folding />
         </state>
       </provider>
@@ -1315,24 +1254,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="51" />
-          <folding>
-            <element signature="e#862#5389#0" expanded="false" />
-            <element signature="e#5420#14233#0" expanded="false" />
-            <element signature="e#14512#17111#0" expanded="false" />
-            <element signature="e#17141#17302#0" expanded="false" />
-            <element signature="e#17345#17863#0" expanded="false" />
-            <element signature="e#21307#21819#0" expanded="false" />
-            <element signature="e#21835#22496#0" expanded="false" />
-            <element signature="n#!!block;n#myalert#0" expanded="false" />
-            <element signature="n#!!block;n#responseHandler#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -1341,63 +1262,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/controller/UserController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/service/SpiderManagementService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="22" column="39" lean-forward="false" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
-          <folding />
+        <state relative-caret-position="286">
+          <caret line="16" column="48" lean-forward="false" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/controller/ContactController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
+        <state relative-caret-position="-374">
           <caret line="26" column="56" lean-forward="false" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/content/admin.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/impl/SpiderDaoIpml.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="61" column="40" lean-forward="false" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
-          <folding />
+        <state relative-caret-position="484">
+          <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/controller/View.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/SpiderDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-          <folding>
-            <element signature="e#292#293#0" expanded="true" />
-            <element signature="e#322#323#0" expanded="true" />
-            <element signature="e#486#487#0" expanded="true" />
-            <element signature="e#519#520#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="220">
+          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/controller/SpiderController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/content/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="99" column="73" lean-forward="false" selection-start-line="99" selection-start-column="73" selection-end-line="99" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-mvc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="53" column="22" lean-forward="false" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+        <state relative-caret-position="0">
+          <caret line="23" column="61" lean-forward="false" selection-start-line="23" selection-start-column="61" selection-end-line="23" selection-end-column="61" />
           <folding />
         </state>
       </provider>
@@ -1405,50 +1302,183 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/content/redirect.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
-          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/service/SpiderManagementService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="16" column="48" lean-forward="false" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
-          <folding />
+          <caret line="8" column="59" lean-forward="true" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/service/impl/SpiderManagementServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="2" selection-end-line="61" selection-end-column="11" />
+        <state relative-caret-position="286">
+          <caret line="26" column="41" lean-forward="false" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+          <folding>
+            <element signature="e#939#940#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/entity/NoCacheFilter.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="814">
+          <caret line="37" column="61" lean-forward="false" selection-start-line="37" selection-start-column="61" selection-end-line="37" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/SpiderDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/content/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="2046">
+          <caret line="93" column="36" lean-forward="false" selection-start-line="93" selection-start-column="36" selection-end-line="93" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/interceptor/LoginInterceptor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="41" column="44" lean-forward="false" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+        <state relative-caret-position="16236">
+          <caret line="738" column="26" lean-forward="false" selection-start-line="738" selection-start-column="26" selection-end-line="738" selection-end-column="26" />
+          <folding>
+            <marker date="1520677005617" expanded="true" signature="2131:2353" ph="..." />
+            <marker date="1520677005617" expanded="true" signature="2921:3350" ph="..." />
+            <marker date="1520677005617" expanded="true" signature="2959:3333" ph="..." />
+            <marker date="1520677005617" expanded="true" signature="6788:7315" ph="..." />
+            <marker date="1520677005617" expanded="true" signature="6969:7121" ph="..." />
+            <marker date="1520677005617" expanded="true" signature="7142:7297" ph="..." />
+            <marker date="1520677005617" expanded="true" signature="7886:8315" ph="..." />
+            <marker date="1520677005617" expanded="true" signature="7924:8298" ph="..." />
+            <marker date="1520677005617" expanded="true" signature="15577:15889" ph="..." />
+            <marker date="1520677005617" expanded="true" signature="15716:15871" ph="..." />
+            <marker date="1520677005617" expanded="true" signature="16460:16889" ph="..." />
+            <marker date="1520677005617" expanded="true" signature="16498:16872" ph="..." />
+            <marker date="1520677005617" expanded="true" signature="17548:17839" ph="..." />
+            <marker date="1520677005617" expanded="true" signature="17708:17828" ph="..." />
+            <marker date="1520677005617" expanded="true" signature="17766:17823" ph="..." />
+            <marker date="1520677005617" expanded="true" signature="23153:23345" ph="..." />
+            <marker date="1520677005617" expanded="true" signature="23431:23601" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/content/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="60" column="39" lean-forward="false" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/filter/NoCacheFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="17" column="42" lean-forward="false" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/controller/SpiderController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+        <state relative-caret-position="682">
+          <caret line="41" column="15" lean-forward="false" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/controller/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="13" column="23" lean-forward="false" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+          <folding>
+            <element signature="e#340#341#0" expanded="true" />
+            <element signature="e#370#371#0" expanded="true" />
+            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#464#465#0" expanded="true" />
+            <element signature="e#534#535#0" expanded="true" />
+            <element signature="e#567#568#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/interceptor/UrlInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-mvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="60" column="38" lean-forward="false" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/interceptor/LoginInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="14" column="52" lean-forward="false" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/entity/Data.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk 1.8.0_91/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="110" column="17" lean-forward="false" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/service/impl/DataServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/impl/DataDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="28" column="23" lean-forward="true" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-mongodb/2.0.3.RELEASE/spring-data-mongodb-2.0.3.RELEASE.jar!/org/springframework/data/mongodb/core/MongoTemplate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="117" column="33" lean-forward="false" selection-start-line="117" selection-start-column="33" selection-end-line="117" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/impl/MongoBaseImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+          <folding>
+            <element signature="e#994#995#0" expanded="true" />
+            <element signature="e#1054#1055#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

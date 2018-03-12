@@ -3,6 +3,8 @@ package com.scau.DataCollectionSystem.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletResponse;
+
 @Controller
 @RequestMapping(value = "/view")
 public class View {
@@ -21,6 +23,5 @@ public class View {
     public String redirect(){
         return "redirect";
     }
-
 
 }

@@ -33,6 +33,15 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
+    <filter>
+        <filter-name>NoCacheFilter</filter-name>
+        <filter-class>com.scau.DataCollectionSystem.filter.NoCacheFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>NoCacheFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
     <!-- Spring MVC servlet -->
     <servlet>
         <servlet-name>SpringMVC</servlet-name>
@@ -49,11 +58,6 @@
         <servlet-name>SpringMVC</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
-
-    <!-- 设置session超时时间为5分钟 -->
-    <session-config>
-        <session-timeout>5</session-timeout>
-    </session-config>
 
     <!-- 加载log4j配置文件 -->
     <context-param>

@@ -4,6 +4,8 @@ const ajaxOptions = {
     timeout: 5000,
     beforeSend: function() {
         this.url='/DataCollectionSystem' + this.url;
+        myalert('success', '数据发送成功');
+        if(!this.data) return;
         this.data = (function (string) {  
             var obj = {}, 
                 pairs = string.split('&'), 
@@ -20,7 +22,7 @@ const ajaxOptions = {
         })(this.data);  
 
         //console.log(this.data);
-        myalert('success', '数据发送成功');
+
     },
     contentType:"application/json",
     dataType: 'JSON',
@@ -729,6 +731,19 @@ $(function() {
         $('.content>div:eq(1)').toggle();
         $('#newSpider').toggle();
     });
+
+    $('.loginout').click(function(){
+        var url = '/DataCollectionSystem/logout?time=' + Date.now();
+        $.get(url)
+            .done(function(){
+                var i = 1;
+                window.location.href = './index';
+            }).fail(function(){
+                window.location.href = './index';
+        });
+        console.log(1);
+
+    })
 })
 
 $(function() {
