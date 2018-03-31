@@ -11,7 +11,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 public class Spider {
 
     @Field
-    private String name;
+    private String spider_name;
 
     @Field
     private String url;
@@ -32,7 +32,7 @@ public class Spider {
     private String date2;
 
     public Spider(String name, String url, String createDate, String title1, String date1, String title2, String date2) {
-        this.name = name;
+        this.spider_name = name;
         this.url = url;
         this.createDate = createDate;
         this.title1 = title1;
@@ -42,11 +42,11 @@ public class Spider {
     }
 
     public String getName() {
-        return name;
+        return spider_name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.spider_name = name;
     }
 
     public String getUrl() {
