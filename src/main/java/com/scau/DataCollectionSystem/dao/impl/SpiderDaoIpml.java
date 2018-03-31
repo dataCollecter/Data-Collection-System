@@ -23,14 +23,14 @@ public class SpiderDaoIpml extends MongoBaseImpl<Spider> implements SpiderDao {
     @Override
     public Spider findSpider(String name) {
         Query query = new Query();
-        query.addCriteria(new Criteria("name").is(name));
+        query.addCriteria(new Criteria("spider_name").is(name));
         return this.findOne(query, Spider.class);
     }
 
     @Override
     public void removeSpider(String name) {
         Query query = new Query();
-        query.addCriteria(new Criteria("name").is(name));
+        query.addCriteria(new Criteria("spider_name").is(name));
         this.remove(query, Spider.class);
     }
 }
