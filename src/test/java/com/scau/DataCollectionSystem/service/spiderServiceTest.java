@@ -25,7 +25,7 @@ public class spiderServiceTest {
         spiderManagementService.createSpider("a","1","1","1","1","2");
         List<Spider> spiderList=spiderManagementService.getSpiderList();
         System.out.println(spiderList.size());
-        System.out.println(spiderList.get(0).getName());
+        System.out.println(spiderList.get(0).getSpider_name());
         spiderManagementService.removeSpider("a");
     }
 

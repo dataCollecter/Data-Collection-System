@@ -28,7 +28,7 @@ public class daoTest {
     public void Test() {
         spiderDao.remove(new Query(),Spider.class);
         Spider spider=spiderDao.findOne(new Query(Criteria.where("name").is("a")),Spider.class);
-        System.out.println(spider.getName()+spider.getTitle1());
+        System.out.println(spider.getSpider_name()+spider.getTitle1());
         List<Spider> spiderList=spiderDao.findAll(Spider.class);
         System.out.println(spiderList.size());
         spiderList=spiderDao.find(new Query(),Spider.class);
@@ -37,7 +37,7 @@ public class daoTest {
         update.set("title1","4 ");
         spiderDao.updateFirst(new Query(Criteria.where("name").is("a")),update,Spider.class);
         spider=spiderDao.findOne(new Query(Criteria.where("name").is("a")),Spider.class);
-        System.out.println(spider.getName()+spider.getTitle1());
+        System.out.println(spider.getSpider_name()+spider.getTitle1());
         spiderDao.updateMulti(new Query(Criteria.where("url").is("2017-01-01")),update,Spider.class);
         spiderList=spiderDao.findAll(Spider.class);
         for (int i=0;i<4;i++){

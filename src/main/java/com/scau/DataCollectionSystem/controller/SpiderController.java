@@ -29,7 +29,7 @@ public class SpiderController {
         for(int i=0; i<data.size(); ++i)
         {
             JSONObject obj = new JSONObject();
-            obj.put("name", data.get(i).getName());
+            obj.put("name", data.get(i).getSpider_name());
             obj.put("url", data.get(i).getUrl());
             obj.put("time", data.get(i).getCreateDate());
 

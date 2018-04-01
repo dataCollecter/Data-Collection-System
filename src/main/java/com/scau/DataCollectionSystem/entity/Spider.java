@@ -31,8 +31,8 @@ public class Spider {
     @Field
     private String date2;
 
-    public Spider(String name, String url, String createDate, String title1, String date1, String title2, String date2) {
-        this.spider_name = name;
+    public Spider(String spider_name, String url, String createDate, String title1, String date1, String title2, String date2) {
+        this.spider_name = spider_name;
         this.url = url;
         this.createDate = createDate;
         this.title1 = title1;
@@ -41,11 +41,11 @@ public class Spider {
         this.date2 = date2;
     }
 
-    public String getName() {
+    public String getSpider_name() {
         return spider_name;
     }
 
-    public void setName(String name) {
+    public void setSpider_name(String name) {
         this.spider_name = name;
     }
 
