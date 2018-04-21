@@ -76,9 +76,8 @@ let Data = (function() {
                 dom +=
                     `<tr>
 	                <td>${i+1}</td>
-	                <td>${Data[i].source}</td>
-	                <td>${Data[i].url}</td>
-	                <td>${Data[i].title}</td>
+                    <td>${Data[i].source}</td>
+                    <td><a href="${Data[i].url}" target="_blank">${Data[i].title}</a></td>
 	                <td>${Data[i].time}</td>
 	            </tr>
 	    		`;

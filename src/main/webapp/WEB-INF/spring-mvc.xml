@@ -28,12 +28,11 @@
     <mvc:default-servlet-handler/>
 
     <!--&lt;!&ndash;Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory&ndash;&gt;-->
-    <mvc:resources mapping="/view/static/css/**" location="/static/css/" cache-period="1"/>
-    <mvc:resources mapping="/view/static/fonts/**" location="/static/fonts/" cache-period="1"/>
-    <mvc:resources mapping="/view/static/js/**" location="/static/js/" cache-period="1"/>
-    <mvc:resources mapping="/view/static/img/**" location="/static/img/" cache-period="1"/>
+    <mvc:resources mapping="/view/static/css/**" location="/static/css/"/>
+    <mvc:resources mapping="/view/static/fonts/**" location="/static/fonts/"/>
+    <mvc:resources mapping="/view/static/js/**" location="/static/js/"/>
+    <mvc:resources mapping="/view/static/img/**" location="/static/img/"/>
     <!--<mvc:resources mapping="/WEB-INF/content/**" location="/WEB-INF/content/**" cache-period="1"/>-->
-
 
     <!-- 设置使用注解的类所在的包 -->
     <context:component-scan base-package="com.scau.DataCollectionSystem.controller" ></context:component-scan>
@@ -59,14 +58,15 @@
         <!--登录认证拦截器-->
         <mvc:interceptor>
             <mvc:mapping path="/**" />
-            <!--<mvc:exclude-mapping path="/view/static/**" />-->
+            <mvc:exclude-mapping path="/view/static/**" />
             <bean class="com.scau.DataCollectionSystem.interceptor.LoginInterceptor" />
         </mvc:interceptor>
 
-        <!--<mvc:interceptor>-->
-            <!--<mvc:mapping path="/**" />-->
-            <!--<bean class="com.scau.DataCollectionSystem.interceptor.UrlInterceptor" />-->
-        <!--</mvc:interceptor>-->
+        <mvc:interceptor>
+            <mvc:mapping path="/**" />
+            <mvc:exclude-mapping path="/view/static/**" />
+            <bean class="com.scau.DataCollectionSystem.interceptor.UrlInterceptor" />
+        </mvc:interceptor>
     </mvc:interceptors>
 
 </beans>
