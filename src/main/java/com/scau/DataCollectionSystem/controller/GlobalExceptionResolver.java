@@ -16,9 +16,7 @@ public class GlobalExceptionResolver implements HandlerExceptionResolver {
 
     @Override
     public ModelAndView resolveException(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, Exception e) {
-        log.error("Error", e);
-//        ModelAndView mv = new ModelAndView("/WEB-INF/content/error.html");
-        ModelAndView mv = new ModelAndView("error");
-        return mv;
+        log.error("Error Info : ", e);
+        return new ModelAndView("error");
     }
 }
