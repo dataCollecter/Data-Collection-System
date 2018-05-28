@@ -35,8 +35,9 @@ public class SpiderManagementServiceImpl implements SpiderManagementService {
 
         spiderDao.removeSpider(name);
         try {
-            FileWriter fileWriter=new FileWriter("/home/hadoop/start_spider/"+name+".sh");
+            FileWriter fileWriter=new FileWriter("/root/start_spider/"+name+".sh");
             fileWriter.write("");
+            fileWriter.flush();
             fileWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
@@ -49,9 +50,9 @@ public class SpiderManagementServiceImpl implements SpiderManagementService {
         if(spiderDao.findSpider(name) != null)
             return false;
 
-        String shpath="/home/hadoop/start_spider/"+name+".sh";
-        String timing_path="/var/spool/cron/crontabs/hadoop";
-        String body="#!/bin/sh\ncd /home/hadoop/spider\nscrapy crawl test -a spider_name="+name+"\n";
+        String shpath="/root/start_spider/"+name+".sh";
+        String timing_path="/var/spool/cron/crontabs/root";
+        String body="#!/bin/sh\ncd /root/dataCollecter \nscrapy crawl test -a spider_name="+name+"\n";
         try {
             Random random=new Random();
             File file=new File(shpath);
