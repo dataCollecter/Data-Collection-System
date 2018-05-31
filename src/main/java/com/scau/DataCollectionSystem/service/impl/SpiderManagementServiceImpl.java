@@ -40,7 +40,8 @@ public class SpiderManagementServiceImpl implements SpiderManagementService {
         StringBuilder context=new StringBuilder();
         try {
             File file=new File("/root/start_spider/"+name+".sh");
-            file.deleteOnExit();
+            if(file.exists())
+                file.delete();
             BufferedReader reader=new BufferedReader(new FileReader("/var/spool/cron/crontabs/root"));
             String line;
             Pattern pattern=Pattern.compile("/root/start_spider/"+name+".sh");
