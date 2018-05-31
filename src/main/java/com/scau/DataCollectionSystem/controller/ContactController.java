@@ -25,7 +25,7 @@ public class ContactController {
     {
 //        int limit = json.getInt("pageSize");
 //        int skip = (json.getInt("pageNum")-1) * limit;
-        List<Email> contacts = contactService.getAlllContacts();
+        List<Email> contacts = contactService.getAllContacts();
 
         JSONArray array = new JSONArray();
         for(int i=0; i<contacts.size(); ++i)
