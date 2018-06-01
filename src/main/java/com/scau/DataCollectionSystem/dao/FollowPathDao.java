@@ -7,5 +7,5 @@ import com.scau.DataCollectionSystem.entity.FollowPath;
  */
 public interface FollowPathDao extends MongoBase<FollowPath> {
 
-    void removeFollowPath(String spiderName);
+    public void removeFollowPath(String spiderName);
 }

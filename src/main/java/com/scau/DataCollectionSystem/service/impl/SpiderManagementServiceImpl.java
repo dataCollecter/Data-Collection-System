@@ -1,5 +1,6 @@
 package com.scau.DataCollectionSystem.service.impl;
 
+import com.scau.DataCollectionSystem.dao.FollowPathDao;
 import com.scau.DataCollectionSystem.dao.SpiderDao;
 import com.scau.DataCollectionSystem.entity.Spider;
 import com.scau.DataCollectionSystem.service.SpiderManagementService;
@@ -27,6 +28,8 @@ public class SpiderManagementServiceImpl implements SpiderManagementService {
 
     @Autowired
     private SpiderDao spiderDao;
+    @Autowired
+    private FollowPathDao followPathDao;
 
     public List<Spider> getSpiderList() {
         return spiderDao.getSpiderList();
@@ -37,6 +40,7 @@ public class SpiderManagementServiceImpl implements SpiderManagementService {
             return false;
 
         spiderDao.removeSpider(name);
+        followPathDao.removeFollowPath(name);
         StringBuilder context=new StringBuilder();
         try {
             File file=new File("/root/start_spider/"+name+".sh");
