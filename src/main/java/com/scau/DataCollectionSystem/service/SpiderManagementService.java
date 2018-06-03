@@ -10,7 +10,7 @@ import com.scau.DataCollectionSystem.entity.Spider;
  */
 public interface SpiderManagementService {
 
-    List<Spider> getSpiderList();
+    List<Spider> getSpiderList(int skip, int limit);
 
     boolean removeSpider(String name);
 

@@ -25,7 +25,9 @@ public class SpiderManagementServiceImpl implements SpiderManagementService {
     @Autowired
     private SpiderDao spiderDao;
 
-    public List<Spider> getSpiderList() {
+    @Override
+    public List<Spider> getSpiderList(int skip, int limit) {
+
         return spiderDao.getSpiderList();
     }
 

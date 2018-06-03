@@ -23,16 +23,15 @@ public class ContactController {
     @ResponseBody
     public JSONObject getContactList(@RequestBody JSONObject json)
     {
-//        int limit = json.getInt("pageSize");
-//        int skip = (json.getInt("pageNum")-1) * limit;
-        List<Email> contacts = contactService.getAlllContacts();
+        int limit = json.getInt("pageSize");
+        int skip = (json.getInt("pageNum")-1) * limit;
+        List<Email> contacts = contactService.getContacts(skip, limit);
 
         JSONArray array = new JSONArray();
-        for(int i=0; i<contacts.size(); ++i)
-        {
+        for (Email contact : contacts) {
             JSONObject obj = new JSONObject();
-            obj.put("name", contacts.get(i).getName());
-            obj.put("mail", contacts.get(i).getAddress());
+            obj.put("name", contact.getName());
+            obj.put("mail", contact.getAddress());
 
             array.add(obj);
         }

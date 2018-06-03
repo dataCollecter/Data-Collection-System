@@ -21,21 +21,19 @@ public class DataController {
 
     @RequestMapping(value = "/get")
     @ResponseBody
-    public JSONObject getData(@RequestBody JSONObject json)
-    {
-//        int limit = json.getInt("pageSize");
-//        int skip = (json.getInt("pageNum")-1) * limit;
+    public JSONObject getData(@RequestBody JSONObject json) {
+        int limit = json.getInt("pageSize");
+        int skip = (json.getInt("pageNum") - 1) * limit;
 
-        List<Data> data = dataService.getAllData();
+        List<Data> data = dataService.getData(skip, limit);
 
         JSONArray array = new JSONArray();
-        for(int i=0; i<data.size(); ++i)
-        {
+        for (Data aData : data) {
             JSONObject obj = new JSONObject();
-            obj.put("source", data.get(i).getSpider());
-            obj.put("time", data.get(i).getDate());
-            obj.put("title", data.get(i).getTitle());
-            obj.put("url", data.get(i).getUrl());
+            obj.put("source", aData.getSpider());
+            obj.put("time", aData.getDate());
+            obj.put("title", aData.getTitle());
+            obj.put("url", aData.getUrl());
 
             array.add(obj);
         }
@@ -47,25 +45,23 @@ public class DataController {
 
     @RequestMapping(value = "/query")
     @ResponseBody
-    public JSONObject queryData(@RequestBody JSONObject json)
-    {
-//        int limit = json.getInt("pageSize");
-//        int skip = (json.getInt("pageNum")-1) * limit;
+    public JSONObject queryData(@RequestBody JSONObject json) {
+        int limit = json.getInt("pageSize");
+        int skip = (json.getInt("pageNum")-1) * limit;
         String[] info = new String[3];
         info[0] = json.getString("source");
         info[1] = json.getString("time");
         info[2] = json.getString("key");
 
-        List<Data> data = dataService.queryData(info);
+        List<Data> data = dataService.queryData(info, skip, limit);
 
         JSONArray array = new JSONArray();
-        for(int i=0; i<data.size(); ++i)
-        {
+        for (Data aData : data) {
             JSONObject obj = new JSONObject();
-            obj.put("source", data.get(i).getSpider());
-            obj.put("time", data.get(i).getDate());
-            obj.put("title", data.get(i).getTitle());
-            obj.put("url", data.get(i).getUrl());
+            obj.put("source", aData.getSpider());
+            obj.put("time", aData.getDate());
+            obj.put("title", aData.getTitle());
+            obj.put("url", aData.getUrl());
 
             array.add(obj);
         }

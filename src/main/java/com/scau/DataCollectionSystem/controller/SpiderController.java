@@ -26,12 +26,11 @@ public class SpiderController {
         List<Spider> data = spiderService.getSpiderList();
 
         JSONArray array = new JSONArray();
-        for(int i=0; i<data.size(); ++i)
-        {
+        for (Spider aData : data) {
             JSONObject obj = new JSONObject();
-            obj.put("name", data.get(i).getSpider_name());
-            obj.put("url", data.get(i).getUrl());
-            obj.put("time", data.get(i).getCreateDate());
+            obj.put("name", aData.getSpider_name());
+            obj.put("url", aData.getUrl());
+            obj.put("time", aData.getCreateDate());
 
             array.add(obj);
         }

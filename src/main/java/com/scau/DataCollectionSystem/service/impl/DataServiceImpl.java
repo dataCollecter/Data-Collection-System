@@ -16,14 +16,12 @@ public class DataServiceImpl implements DataService {
 
     @Override
     public List<Data> getData(int skip, int limit) {
-        List<Data> resList = dataDao.getData(skip, limit);
-        return resList;
+        return dataDao.getData(skip, limit);
     }
 
     @Override
     public List<Data> getAllData() {
-        List<Data> resList = dataDao.getData();
-        return resList;
+        return dataDao.getData();
     }
 
     @Override
@@ -33,25 +31,20 @@ public class DataServiceImpl implements DataService {
         String[] value = new String[3];
         int count = 0;
 
-        if(!info[0].trim().equals(""))
-        {
+        if (!info[0].trim().equals("")) {
             key[count] = "spider";
             value[count++] = info[0];
         }
-        if(!info[1].trim().equals(""))
-        {
+        if (!info[1].trim().equals("")) {
             key[count] = "date";
             value[count++] = info[1];
         }
-        if(!info[2].trim().equals(""))
-        {
+        if (!info[2].trim().equals("")) {
             key[count] = "title";
             value[count++] = info[2];
         }
 
-        List<Data> resList = dataDao.queryData(key, value, count, skip, limit);
-
-        return resList;
+        return dataDao.queryData(key, value, count, skip, limit);
     }
 
     @Override
@@ -61,24 +54,19 @@ public class DataServiceImpl implements DataService {
         String[] value = new String[3];
         int count = 0;
 
-        if(!info[0].trim().equals(""))
-        {
+        if (!info[0].trim().equals("")) {
             key[count] = "spider";
             value[count++] = info[0];
         }
-        if(!info[1].trim().equals(""))
-        {
+        if (!info[1].trim().equals("")) {
             key[count] = "date";
             value[count++] = info[1];
         }
-        if(!info[2].trim().equals(""))
-        {
+        if (!info[2].trim().equals("")) {
             key[count] = "title";
             value[count++] = info[2];
         }
 
-        List<Data> resList = dataDao.queryData(key, value, count);
-
-        return resList;
+        return dataDao.queryData(key, value, count);
     }
 }

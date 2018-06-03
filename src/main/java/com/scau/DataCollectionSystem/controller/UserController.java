@@ -25,9 +25,6 @@ public class UserController {
         String password = json.getString("password");
 
         JSONObject res = new JSONObject();
-        int i;
-        if(password.equals("123"))
-            i = 1/0;
         if(userService.login(password))
         {
             res.put("code", 10);
@@ -37,7 +34,6 @@ public class UserController {
             res.put("code", 11);
 
         return res;
-
     }
 
     @RequestMapping(value = "/logout")
