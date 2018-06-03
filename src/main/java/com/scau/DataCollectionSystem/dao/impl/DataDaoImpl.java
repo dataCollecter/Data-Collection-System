@@ -15,7 +15,7 @@ public class DataDaoImpl extends MongoBaseImpl<Data> implements DataDao {
     @Override
     public List<Data> getData() {
         Query query = new Query();
-        query.with(new Sort(Sort.Direction.ASC, "_id"));
+        query.with(new Sort(Sort.Direction.ASC, "date"));
 
         return this.find(query, Data.class);
     }
@@ -23,7 +23,7 @@ public class DataDaoImpl extends MongoBaseImpl<Data> implements DataDao {
     @Override
     public List<Data> getData(int skip, int limit) {
         Query query = new Query();
-        query.with(new Sort(Sort.Direction.ASC, "_id"));
+        query.with(new Sort(Sort.Direction.ASC, "date"));
         query.skip(skip).limit(limit);
 
         return this.find(query, Data.class);
@@ -34,7 +34,7 @@ public class DataDaoImpl extends MongoBaseImpl<Data> implements DataDao {
 
         Query query = new Query();
 
-        query.with(new Sort(Sort.Direction.ASC, "_id"));
+        query.with(new Sort(Sort.Direction.ASC, "date"));
 
         switch (length)
         {
@@ -54,7 +54,7 @@ public class DataDaoImpl extends MongoBaseImpl<Data> implements DataDao {
 
         Query query = new Query();
 
-        query.with(new Sort(Sort.Direction.ASC, "_id"));
+        query.with(new Sort(Sort.Direction.ASC, "date"));
         query.skip(skip).limit(limit);
 
         switch (length)
