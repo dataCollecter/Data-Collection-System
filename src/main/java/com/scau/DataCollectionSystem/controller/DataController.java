@@ -25,21 +25,9 @@ public class DataController {
         int limit = json.getInt("pageSize");
         int skip = (json.getInt("pageNum") - 1) * limit;
 
-        List<Data> data = dataService.getData(skip, limit);
-
-        JSONArray array = new JSONArray();
-        for (Data aData : data) {
-            JSONObject obj = new JSONObject();
-            obj.put("source", aData.getSpider());
-            obj.put("time", aData.getDate());
-            obj.put("title", aData.getTitle());
-            obj.put("url", aData.getUrl());
-
-            array.add(obj);
-        }
+        JSONArray array = buildResult(dataService.getData(skip, limit));
         JSONObject res = new JSONObject();
         res.put("result", array);
-
         return res;
     }
 
@@ -48,13 +36,20 @@ public class DataController {
     public JSONObject queryData(@RequestBody JSONObject json) {
         int limit = json.getInt("pageSize");
         int skip = (json.getInt("pageNum")-1) * limit;
+
         String[] info = new String[3];
         info[0] = json.getString("source");
         info[1] = json.getString("time");
         info[2] = json.getString("key");
 
-        List<Data> data = dataService.queryData(info, skip, limit);
+        JSONArray array = buildResult(dataService.queryData(info, skip, limit));
+        JSONObject res = new JSONObject();
+        res.put("result", array);
 
+        return res;
+    }
+
+    private JSONArray buildResult(List<Data> data) {
         JSONArray array = new JSONArray();
         for (Data aData : data) {
             JSONObject obj = new JSONObject();
@@ -65,10 +60,7 @@ public class DataController {
 
             array.add(obj);
         }
-        JSONObject res = new JSONObject();
-        res.put("result", array);
-
-        return res;
+        return array;
     }
 
 }

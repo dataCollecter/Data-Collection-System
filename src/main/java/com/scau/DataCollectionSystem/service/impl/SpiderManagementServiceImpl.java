@@ -33,8 +33,7 @@ public class SpiderManagementServiceImpl implements SpiderManagementService {
 
     @Override
     public List<Spider> getSpiderList(int skip, int limit) {
-
-        return spiderDao.getSpiderList();
+        return spiderDao.getSpider(skip, limit);
     }
 
     public boolean removeSpider(String name) {

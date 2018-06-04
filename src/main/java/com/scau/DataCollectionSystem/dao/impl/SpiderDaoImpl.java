@@ -13,11 +13,20 @@ import java.util.List;
  * Created by 哲帆 on 2018.1.29.
  */
 @Repository
-public class SpiderDaoIpml extends MongoBaseImpl<Spider> implements SpiderDao {
+public class SpiderDaoImpl extends MongoBaseImpl<Spider> implements SpiderDao {
 
     @Override
     public List<Spider> getSpiderList() {
         return this.findAll(Spider.class);
+    }
+
+    @Override
+    public List<Spider> getSpider(int skip, int limit) {
+        Query query = new Query();
+        query.with(new Sort(Sort.Direction.ASC, "createDate"));
+        query.skip(skip).limit(limit);
+
+        return this.find(query, Spider.class);
     }
 
     @Override

@@ -36,16 +36,7 @@ public class DataDaoImpl extends MongoBaseImpl<Data> implements DataDao {
 
         query.with(new Sort(Sort.Direction.ASC, "date"));
 
-        switch (length)
-        {
-            case 1:query.addCriteria(new Criteria(key[0]).is(value[0]));
-                break;
-            case 2:query.addCriteria(Criteria.where(key[0]).is(value[0]).and(key[1]).is(value[1]));
-                break;
-            case 3:query.addCriteria(Criteria.where(key[0]).is(value[0]).and(key[1]).is(value[1]).and(key[2]).is(value[2]));
-                break;
-
-        }
+        getQuery(key, value, length, query);
         return this.find(query, Data.class);
     }
 
@@ -57,6 +48,11 @@ public class DataDaoImpl extends MongoBaseImpl<Data> implements DataDao {
         query.with(new Sort(Sort.Direction.ASC, "date"));
         query.skip(skip).limit(limit);
 
+        getQuery(key, value, length, query);
+        return this.find(query, Data.class);
+    }
+
+    private void getQuery(String[] key, String[] value, int length, Query query) {
         switch (length)
         {
             case 1:query.addCriteria(new Criteria(key[0]).is(value[0]));
@@ -65,10 +61,6 @@ public class DataDaoImpl extends MongoBaseImpl<Data> implements DataDao {
                 break;
             case 3:query.addCriteria(Criteria.where(key[0]).is(value[0]).and(key[1]).is(value[1]).and(key[2]).is(value[2]));
                 break;
-
         }
-        return this.find(query, Data.class);
     }
-
-
 }

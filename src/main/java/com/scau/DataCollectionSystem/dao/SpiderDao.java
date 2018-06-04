@@ -13,6 +13,8 @@ public interface SpiderDao extends MongoBase<Spider> {
 
     List<Spider> getSpiderList();
 
+    List<Spider> getSpider(int skip, int limit);
+
     Spider findSpider(String name);
 
     void removeSpider(String name);
