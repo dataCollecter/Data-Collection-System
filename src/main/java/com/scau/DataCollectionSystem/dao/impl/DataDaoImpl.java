@@ -30,6 +30,22 @@ public class DataDaoImpl extends MongoBaseImpl<Data> implements DataDao {
     }
 
     @Override
+    public long getCount() {
+        return this.count(new Query(), Data.class);
+    }
+
+    @Override
+    public List<Data> queryData(String key, int skip, int limit) {
+        Query query = new Query();
+        query.with(new Sort(Sort.Direction.ASC, "date"));
+        query.addCriteria(Criteria.where("spider").regex(".*" + query + ".*")
+                        .orOperator(Criteria.where("date").regex(".*" + query + ".*")
+                                .orOperator(Criteria.where("date").regex(".*" + query + ".*"))));
+        return this.find(query, Data.class);
+    }
+
+    @Deprecated
+    @Override
     public List<Data> queryData(String[] key, String[] value,int length) {
 
         Query query = new Query();
@@ -40,6 +56,7 @@ public class DataDaoImpl extends MongoBaseImpl<Data> implements DataDao {
         return this.find(query, Data.class);
     }
 
+    @Deprecated
     @Override
     public List<Data> queryData(String[] key, String[] value,int length, int skip, int limit) {
 

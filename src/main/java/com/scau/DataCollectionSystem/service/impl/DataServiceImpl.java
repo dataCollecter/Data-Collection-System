@@ -15,16 +15,34 @@ public class DataServiceImpl implements DataService {
     private DataDaoImpl dataDao;
 
     @Override
+    public List<Data> dataRequireHandler(int skip, int limit, String query) {
+        if(query.isEmpty())
+            return getData(skip, limit);
+        return queryData(skip, limit, query);
+    }
+
+    @Override
     public List<Data> getData(int skip, int limit) {
         return dataDao.getData(skip, limit);
     }
 
     @Override
+    @Deprecated
     public List<Data> getAllData() {
         return dataDao.getData();
     }
 
+    private List<Data> queryData(int skip, int limit, String query) {
+        return dataDao.queryData(query, skip, limit);
+    }
+
     @Override
+    public long getDataCount() {
+        return dataDao.getCount();
+    }
+
+    @Override
+    @Deprecated
     public List<Data> queryData(String[] info, int skip, int limit) {
 
         String[] key = new String[3];
@@ -48,6 +66,7 @@ public class DataServiceImpl implements DataService {
     }
 
     @Override
+    @Deprecated
     public List<Data> queryData(String[] info) {
 
         String[] key = new String[3];
@@ -69,4 +88,5 @@ public class DataServiceImpl implements DataService {
 
         return dataDao.queryData(key, value, count);
     }
+
 }

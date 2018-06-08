@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @Controller
@@ -21,16 +22,26 @@ public class DataController {
 
     @RequestMapping(value = "/get")
     @ResponseBody
-    public JSONObject getData(@RequestBody JSONObject json) {
-        int limit = json.getInt("pageSize");
-        int skip = (json.getInt("pageNum") - 1) * limit;
+    public JSONObject getData(HttpServletRequest request) {
+        int draw = Integer.parseInt(request.getParameter("draw"));
+        int limit = Integer.parseInt(request.getParameter("length"));
+        int skip = Integer.parseInt(request.getParameter("start"));
+        String query = request.getParameter("search[value]");
 
-        JSONArray array = buildResult(dataService.getData(skip, limit));
+        JSONArray array = new JSONArray();
+        int filter = buildResult(
+                dataService.dataRequireHandler(skip, limit, query), array);
+        long count = dataService.getDataCount();
+
         JSONObject res = new JSONObject();
-        res.put("result", array);
+        res.put("draw", draw);
+        res.put("recordsTotal", count);
+        res.put("recordsFiltered", filter);
+        res.put("data", array);
         return res;
     }
 
+    @Deprecated
     @RequestMapping(value = "/query")
     @ResponseBody
     public JSONObject queryData(@RequestBody JSONObject json) {
@@ -42,15 +53,15 @@ public class DataController {
         info[1] = json.getString("time");
         info[2] = json.getString("key");
 
-        JSONArray array = buildResult(dataService.queryData(info, skip, limit));
+        JSONArray array = new JSONArray();
+        buildResult(dataService.queryData(info, skip, limit), array);
         JSONObject res = new JSONObject();
         res.put("result", array);
 
         return res;
     }
 
-    private JSONArray buildResult(List<Data> data) {
-        JSONArray array = new JSONArray();
+    private int buildResult(List<Data> data, JSONArray array) {
         for (Data aData : data) {
             JSONObject obj = new JSONObject();
             obj.put("source", aData.getSpider());
@@ -60,7 +71,24 @@ public class DataController {
 
             array.add(obj);
         }
-        return array;
+        return data.size();
     }
 
 }
+
+
+/*
+        System.out.println(json);
+        int draw = json.getInt("draw");
+        int limit = json.getInt("pageSize");
+        int skip = (json.getInt("pageNum") - 1) * limit;
+//        String query = json.getString("")
+
+        JSONArray array = buildResult(dataService.getData(skip, limit));
+        JSONObject res = new JSONObject();
+        res.put("draw", draw);
+        res.put("recordsTotal", 1);
+        res.put("recordsFiltered", 1);
+        res.put("result", array);
+        return res;
+ */

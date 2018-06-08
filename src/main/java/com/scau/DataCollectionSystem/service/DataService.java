@@ -5,12 +5,18 @@ import com.scau.DataCollectionSystem.entity.Data;
 import java.util.List;
 
 public interface DataService {
+    List<Data> dataRequireHandler(int skip, int limit, String query);
 
-    public List<Data> getData(int skip, int limit);
+    long getDataCount();
 
-    public List<Data> getAllData();
+    List<Data> getData(int skip, int limit);
 
-    public List<Data> queryData(String[] info, int skip, int limit);
+    @Deprecated
+    List<Data> getAllData();
 
-    public List<Data> queryData(String[] info);
+    @Deprecated
+    List<Data> queryData(String[] info, int skip, int limit);
+
+    @Deprecated
+    List<Data> queryData(String[] info);
 }
