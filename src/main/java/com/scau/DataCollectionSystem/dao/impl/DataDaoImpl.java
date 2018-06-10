@@ -8,6 +8,7 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.regex.Pattern;
 
 @Repository
 public class DataDaoImpl extends MongoBaseImpl<Data> implements DataDao {
@@ -38,9 +39,14 @@ public class DataDaoImpl extends MongoBaseImpl<Data> implements DataDao {
     public List<Data> queryData(String key, int skip, int limit) {
         Query query = new Query();
         query.with(new Sort(Sort.Direction.ASC, "date"));
-        query.addCriteria(Criteria.where("spider").regex(".*" + query + ".*")
-                        .orOperator(Criteria.where("date").regex(".*" + query + ".*")
-                                .orOperator(Criteria.where("date").regex(".*" + query + ".*"))));
+        query.addCriteria(new Criteria().orOperator(
+                Criteria.where("spider").regex(".*" + key + ".*"),
+                Criteria.where("title").regex(".*" + key + ".*"),
+                Criteria.where("date").regex(".*" + key + ".*")
+        ));
+//        query.addCriteria(Criteria.where("spider").regex(".*" + key + ".*") //".*" + key + ".*"
+//                        .orOperator(Criteria.where("title").regex(".*" + key + ".*")
+//                                .orOperator(Criteria.where("date").regex(".*" + key + ".*"))));
         return this.find(query, Data.class);
     }
 
