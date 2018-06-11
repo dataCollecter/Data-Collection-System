@@ -35,7 +35,7 @@
     <!--<mvc:resources mapping="/WEB-INF/content/**" location="/WEB-INF/content/**" cache-period="1"/>-->
 
     <!-- 设置使用注解的类所在的包 -->
-    <context:component-scan base-package="com.scau.DataCollectionSystem.controller"/>
+    <context:component-scan base-package="cn.edu.scau.DataCollectionSystem.controller"/>
     <!-- 完成请求和注解POJO的映射 -->
     <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"><!-- spring3.1之后使用这个类作为注解适配器 -->
         <property name="messageConverters">
@@ -59,13 +59,13 @@
         <!--<mvc:interceptor>-->
             <!--<mvc:mapping path="/**" />-->
             <!--<mvc:exclude-mapping path="/view/static/**" />-->
-            <!--<bean class="com.scau.DataCollectionSystem.interceptor.LoginInterceptor" />-->
+            <!--<bean class="LoginInterceptor" />-->
         <!--</mvc:interceptor>-->
 
         <mvc:interceptor>
             <mvc:mapping path="/**" />
             <mvc:exclude-mapping path="/view/static/**" />
-            <bean class="com.scau.DataCollectionSystem.interceptor.UrlInterceptor" />
+            <bean class="cn.edu.scau.DataCollectionSystem.interceptor.UrlInterceptor" />
         </mvc:interceptor>
     </mvc:interceptors>
 

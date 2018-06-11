@@ -11,10 +11,8 @@
 	<context:annotation-config />
 
 	<!-- 自动扫描 -->
-	<context:component-scan base-package="com.scau.DataCollectionSystem.service" />
-	<context:component-scan base-package="com.scau.DataCollectionSystem.util" />
-
-	<!--<bean class="com.scau.DataCollectionSystem.filter.CorsConfigurerAdapter"/>-->
+	<context:component-scan base-package="cn.edu.scau.DataCollectionSystem.service" />
+	<context:component-scan base-package="cn.edu.scau.DataCollectionSystem.util" />
 	
 	<!-- 导入DAO配置 -->
 	<import resource="spring-mongodb.xml" />    

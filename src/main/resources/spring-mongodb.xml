@@ -14,13 +14,13 @@
     <context:property-placeholder location="classpath:mongodb.properties" />
 
     <!-- 扫描组件包 -->
-    <context:component-scan base-package="com.scau.DataCollectionSystem.dao"/>
+    <context:component-scan base-package="cn.edu.scau.DataCollectionSystem.dao"/>
 
     <!-- SpringData类型转换器
     <mongo:mapping-converter id="mongoConverter">
         <mongo:custom-converters>
             <mongo:converter>
-                <bean class="com.scau.DataCollecter.converter.TimestampConverter" />
+                <bean class="cn.edu.scau.DataCollecter.converter.TimestampConverter" />
             </mongo:converter>
         </mongo:custom-converters>
     </mongo:mapping-converter>   -->
@@ -28,7 +28,7 @@
     <!--实体映射自动扫描注入的包-->
     <!-- 暂且先注释上面的一段 -->
     <mongo:mapping-converter>
-        <mongo:custom-converters base-package="com.scau.DataCollectionSystem.entity" />
+        <mongo:custom-converters base-package="cn.edu.scau.DataCollectionSystem.entity" />
     </mongo:mapping-converter>
 
     <!--
