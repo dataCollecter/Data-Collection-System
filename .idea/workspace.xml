@@ -8,53 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9dd43701-a738-4580-bd1b-6c979f46c526" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataCollectionSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DataCollectionSystem.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/controller/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/controller/ContactController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/controller/DataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/controller/DataController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/controller/GlobalExceptionResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/controller/GlobalExceptionResolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/controller/SpiderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/controller/SpiderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/controller/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/controller/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/DataDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/dao/DataDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/EmailDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/dao/EmailDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/FollowPathDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/dao/FollowPathDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/MongoBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/dao/MongoBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/SpiderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/dao/SpiderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/impl/DataDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/dao/impl/DataDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/impl/EmailDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/dao/impl/EmailDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/impl/FollowPathDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/dao/impl/FollowPathDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/impl/MongoBaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/dao/impl/MongoBaseImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/impl/SpiderDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/dao/impl/SpiderDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/dao/impl/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/entity/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/entity/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/entity/Email.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/entity/Email.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/entity/FollowPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/entity/FollowPath.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/entity/Spider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/entity/Spider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/filter/CorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/filter/CorsFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/filter/NoCacheFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/filter/NoCacheFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/interceptor/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/interceptor/LoginInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/interceptor/UrlInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/interceptor/UrlInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/service/ContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/service/ContactService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/service/DataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/service/DataService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/service/SpiderManagementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/service/SpiderManagementService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/service/impl/ContactServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/service/impl/ContactServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/service/impl/DataServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/service/impl/DataServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/service/impl/SpiderManagementServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/service/impl/SpiderManagementServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/util/MongoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/util/MongoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scau/DataCollectionSystem/util/ObjectParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/util/ObjectParams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring-mongodb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring-mongodb.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-mvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/scau/DataCollectionSystem/dao/daoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/scau/DataCollectionSystem/dao/daoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/scau/DataCollectionSystem/service/ContactTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/scau/DataCollectionSystem/service/ContactTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/scau/DataCollectionSystem/service/DataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/scau/DataCollectionSystem/service/DataTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/scau/DataCollectionSystem/service/EmailTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/scau/DataCollectionSystem/service/EmailTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -77,101 +30,12 @@
     <favorites_list name="Data-Collection-System" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DataServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/service/impl/DataServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
-              <folding>
-                <element signature="e#977#978#0" expanded="true" />
-                <element signature="e#1037#1038#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/dao/impl/DataDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="44" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spring-mvc.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-mvc.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1474">
-              <caret line="67" column="24" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CorsFilter.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/filter/CorsFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mongodb.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mongodb.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="29" selection-start-column="29" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spring-mongodb.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/spring-mongodb.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="83" selection-start-line="14" selection-start-column="83" selection-end-line="14" selection-end-column="83" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SpiderManagementServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/service/impl/SpiderManagementServiceImpl.java">
+    <leaf>
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
-              <folding>
-                <element signature="e#1180#1181#0" expanded="true" />
-                <element signature="e#1235#1236#0" expanded="true" />
-              </folding>
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
@@ -287,8 +151,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -329,7 +191,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="DataCollectionSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="filter" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Data-Collection-System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Data-Collection-System" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="DataCollectionSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Data-Collection-System" type="b2602c69:ProjectViewProjectNode" />
@@ -357,7 +228,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -365,10 +238,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../GomokuOL" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.31839082" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -678,7 +552,9 @@
       <workItem from="1528533044309" duration="1845000" />
       <workItem from="1528612873807" duration="9405000" />
       <workItem from="1528700505873" duration="278000" />
-      <workItem from="1528727450922" duration="2751000" />
+      <workItem from="1528727450922" duration="3023000" />
+      <workItem from="1528772366051" duration="71000" />
+      <workItem from="1530622017833" duration="290000" />
     </task>
     <task id="LOCAL-00001" summary="合并配置和管理，新增调用爬虫">
       <created>1517236977376</created>
@@ -729,7 +605,14 @@
       <option name="project" value="LOCAL" />
       <updated>1528624618119</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="规范包名">
+      <created>1528731392415</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1528731392415</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -765,7 +648,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72604000" />
+    <option name="totallyTimeSpent" value="73237000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -777,45 +660,46 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5019157" side_tool="true" weight="0.32916668" />
       <window_info anchor="bottom" id="Application Servers" order="8" weight="0.32916668" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="right" id="CDI" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="right" id="CDI" order="3" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="1" sideWeight="0.54946727" side_tool="true" visible="true" weight="0.1988273" />
       <window_info anchor="right" id="JSF" order="3" />
-      <window_info id="Structure" order="1" sideWeight="0.5464995" side_tool="true" visible="true" weight="0.2260128" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39916405" />
       <window_info anchor="bottom" id="TODO" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.3281412" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="5" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32916668" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49808428" weight="0.31870428" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49808428" visible="true" weight="0.317757" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3299595" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4535005" visible="true" weight="0.2260128" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.45053273" visible="true" weight="0.1988273" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3299595" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="7" show_stripe_button="false" sideWeight="0.50416666" side_tool="true" weight="0.20682302" />
-      <window_info id="Nl-Palette" order="8" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Properties" order="3" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32845187" />
-      <window_info anchor="right" id="Properties" order="3" />
+      <window_info id="Nl-Palette" order="8" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3299595" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -858,7 +742,8 @@
     <MESSAGE value="跨域&#10;后台分页" />
     <MESSAGE value="转换为后台分页，以及一些代码优化" />
     <MESSAGE value="数据部分显示和后台优化" />
-    <option name="LAST_COMMIT_MESSAGE" value="数据部分显示和后台优化" />
+    <MESSAGE value="规范包名" />
+    <option name="LAST_COMMIT_MESSAGE" value="规范包名" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -944,13 +829,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="398">
           <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
@@ -1059,9 +937,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="50" selection-start-line="50" selection-end-line="50" />
-          <folding>
-            <element signature="e#989#990#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1118,10 +993,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#977#978#0" expanded="true" />
-            <element signature="e#1037#1038#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1164,10 +1035,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="32" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="e#1180#1181#0" expanded="true" />
-            <element signature="e#1235#1236#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1215,8 +1082,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/filter/CorsFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="616">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/scau/DataCollectionSystem/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
@@ -1230,8 +1104,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
-                <option value="0.5" />
+                <option value="0.31839082" />
               </list>
             </option>
           </splitter-proportions>
@@ -1243,7 +1116,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.31839082" />
               </list>
             </option>
           </splitter-proportions>
@@ -1278,7 +1151,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.31839082" />
               </list>
             </option>
           </splitter-proportions>
@@ -1286,11 +1159,11 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited />
+          <last-edited>Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.4</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.31839082" />
               </list>
             </option>
           </splitter-proportions>
