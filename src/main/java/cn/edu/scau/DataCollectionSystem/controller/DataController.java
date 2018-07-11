@@ -29,14 +29,14 @@ public class DataController {
         String query = request.getParameter("search[value]");
 
         JSONArray array = new JSONArray();
-        int filter = buildResult(
+        int filter = buildResult(   //这个值暂且没用
                 dataService.dataRequireHandler(skip, limit, query), array);
         long count = dataService.getDataCount();
 
         JSONObject res = new JSONObject();
         res.put("draw", draw);
         res.put("recordsTotal", count);
-        res.put("recordsFiltered", filter);
+        res.put("recordsFiltered", count);  //filter);
         res.put("data", array);
         return res;
     }

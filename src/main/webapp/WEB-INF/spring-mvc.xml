@@ -55,16 +55,16 @@
     <mvc:interceptors>
         <!-- 多个拦截器，顺序执行 -->
 
-        <!--&lt;!&ndash;登录认证拦截器&ndash;&gt;-->
-        <!--<mvc:interceptor>-->
-            <!--<mvc:mapping path="/**" />-->
-            <!--<mvc:exclude-mapping path="/view/static/**" />-->
-            <!--<bean class="LoginInterceptor" />-->
-        <!--</mvc:interceptor>-->
+        <!--登录认证拦截器-->
+        <mvc:interceptor>
+            <mvc:mapping path="/**" />
+            <mvc:exclude-mapping path="/view/**" />
+            <bean class="cn.edu.scau.DataCollectionSystem.interceptor.LoginInterceptor" />
+        </mvc:interceptor>
 
         <mvc:interceptor>
             <mvc:mapping path="/**" />
-            <mvc:exclude-mapping path="/view/static/**" />
+            <mvc:exclude-mapping path="/view/**" />
             <bean class="cn.edu.scau.DataCollectionSystem.interceptor.UrlInterceptor" />
         </mvc:interceptor>
     </mvc:interceptors>

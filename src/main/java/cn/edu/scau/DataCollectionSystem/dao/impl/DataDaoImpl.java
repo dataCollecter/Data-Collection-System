@@ -15,7 +15,7 @@ public class DataDaoImpl extends MongoBaseImpl<Data> implements DataDao {
     @Override
     public List<Data> getData() {
         Query query = new Query();
-        query.with(new Sort(Sort.Direction.ASC, "date"));
+        query.with(new Sort(Sort.Direction.DESC, "date"));
 
         return this.find(query, Data.class);
     }
@@ -23,7 +23,7 @@ public class DataDaoImpl extends MongoBaseImpl<Data> implements DataDao {
     @Override
     public List<Data> getData(int skip, int limit) {
         Query query = new Query();
-        query.with(new Sort(Sort.Direction.ASC, "date"));
+        query.with(new Sort(Sort.Direction.DESC, "date"));
         query.skip(skip).limit(limit);
 
         return this.find(query, Data.class);
@@ -37,7 +37,7 @@ public class DataDaoImpl extends MongoBaseImpl<Data> implements DataDao {
     @Override
     public List<Data> queryData(String key, int skip, int limit) {
         Query query = new Query();
-        query.with(new Sort(Sort.Direction.ASC, "date"));
+        query.with(new Sort(Sort.Direction.DESC, "date"));
         query.addCriteria(new Criteria().orOperator(
                 Criteria.where("spider").regex(".*" + key + ".*"),
                 Criteria.where("title").regex(".*" + key + ".*"),
@@ -55,7 +55,7 @@ public class DataDaoImpl extends MongoBaseImpl<Data> implements DataDao {
 
         Query query = new Query();
 
-        query.with(new Sort(Sort.Direction.ASC, "date"));
+        query.with(new Sort(Sort.Direction.DESC, "date"));
 
         getQuery(key, value, length, query);
         return this.find(query, Data.class);
@@ -67,7 +67,7 @@ public class DataDaoImpl extends MongoBaseImpl<Data> implements DataDao {
 
         Query query = new Query();
 
-        query.with(new Sort(Sort.Direction.ASC, "date"));
+        query.with(new Sort(Sort.Direction.DESC, "date"));
         query.skip(skip).limit(limit);
 
         getQuery(key, value, length, query);
