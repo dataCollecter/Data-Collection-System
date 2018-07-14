@@ -27,7 +27,7 @@
     <!--过滤掉所有的静态资源，把静态资直接交给tomcat去处理-->
     <mvc:default-servlet-handler/>
 
-    <!--&lt;!&ndash;Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory&ndash;&gt;-->
+    <!--Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory-->
     <mvc:resources mapping="/view/css/**" location="/static/css/"/>
     <mvc:resources mapping="/view/fonts/**" location="/static/fonts/"/>
     <mvc:resources mapping="/view/js/**" location="/static/js/"/>

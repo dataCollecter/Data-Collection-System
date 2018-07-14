@@ -23,33 +23,6 @@ const language_CN = {
       "sSortDescending": ": 降序"
   }
 }  
-const ajaxOptions = {
-    method: 'POST',
-    timeout: 5000,
-    beforeSend: function() {
-        var BASEURL = '/DataCollectionSystem';
-        this.url= BASEURL + this.url;
-        myalert('success', '数据发送成功');
-        if(!this.data) return;
-        this.data = (function (string) {  
-            var obj = {}, 
-                pairs = string.split('&'), 
-                d = decodeURIComponent,
-                name, 
-                value;  
-            $.each(pairs, function (i, pair) {  
-                pair = pair.split('=');  
-                name = d(pair[0]);  
-                value = d(pair[1]);  
-                obj[name] = !obj[name] ? value : [].concat(obj[name]).concat(value);  
-            });  
-            return JSON.stringify(obj);  
-        })(this.data);  
-       
-    },
-    contentType:"application/json",
-    dataType: 'JSON',
-};
 
 // 页面切换
 $(function() {
@@ -66,6 +39,12 @@ $(function() {
         let div = content.children(`div:eq(${index-1})`);
         div.show()
             .siblings().hide();
+
+        if(index>1){
+          let item = inits[index-2];
+          getDatas(item.options,item.handler);
+        }
+
     });
 
     $('.newSpider').click(function() {
@@ -79,23 +58,23 @@ $(function() {
         $('#newPeople').toggle();
     });
 
-
-    //logout
+    //logout 登出
     $('.loginout').click(function(){
         var options = {
             'url':'/logout',
             'data':null
         }
-        $.ajax($.extend(options, ajaxOptions))
-            .done(function(data) {
-              
-            })
-            .fail(function(err) {
-                
-            });  
-    })
 
+        getJson(options)
+          .then( () => {
+            window.location.href = " /";
+        }).catch( () => {
+            window.location.href = " /";
+        })    
+      })
+    
 })
+
 let inits = [
     {
         el:'#Spider',
@@ -133,9 +112,10 @@ let inits = [
             data: {
                 pageNum: 1,
                 pageSize: 1000
-            }   
+            }  
         }
     },
+
     {
         el:'#People',
         columns: [
@@ -156,7 +136,7 @@ let inits = [
                     render:function(data,type,row,meta){
                         let name = row.name;
                         let index = meta.row + 1 + meta.settings._iDisplayStart;
-                        return `<button class="btn btn-danger" onclick="peopleDelete(${name+''},${index});return false;">删除</button>`;
+                        return `<button class="btn btn-danger" onclick="peopleDelete('${name}','${index}');return false;">删除</button>`;
                     }
                 }
             ],
@@ -166,10 +146,11 @@ let inits = [
             data: {
                 pageNum: 1,
                 pageSize: 1000
-            }   
+            }
         }
     },
 ]
+
 $(function() {
     inits.forEach( item => {
           item.handler = $(item.el).DataTable({
@@ -191,27 +172,27 @@ $(function() {
         "scorting":false,
         "ajax": {
             url: '/DataCollectionSystem/data/get',
-            type: 'POST', 
+            type: 'POST'
         },
         "columns": [
-                    {
-                        data:null,
-                        render:function(data,type,row,meta){
-                            return meta.row + 1 + meta.settings._iDisplayStart;  
-                        }
-                    },
-                    {
-                        data:'source'
-                    },
-                    {
-                        data:'title',
-                        render:function(data,type,row){
-                            return `<a href=${row.url}  targer="_blank">${data}</a>`;
-                        }
-                    },
-                    {
-                        data:'time'
-                    }
+            {
+                data:null,
+                render:function(data,type,row,meta){
+                    return meta.row + 1 + meta.settings._iDisplayStart;  
+                }
+            },
+            {
+                data:'source'
+            },
+            {
+                data:'title',
+                render:function(data,type,row){
+                    return `<a href=${row.url}  targer="_blank">${data}</a>`;
+                }
+            },
+            {
+                data:'time'
+            }
         ],
         language: language_CN,
         "deferRender": false,
@@ -220,7 +201,7 @@ $(function() {
     } );
 
     // 新建爬虫
-    $('#Spideradd').click(() => {
+    $('#Spideradd').click( e => {
         e.preventDefault();
         let inputs = $('#newSpider .box-body input');
         //如果有空的输入值
@@ -266,8 +247,8 @@ $(function() {
             myalert('info','请检查表格!');
             return ;
           }
-        
         }
+
       getJson({
           url: '/contact/add',
           method:'post',
@@ -284,26 +265,11 @@ $(function() {
        
     })
 
-    // 更新spider
-    $('#updateSpider').click( e => {
-        e.preventDefault();
-        let item = inits[0];
-        getDatas(item.options,item.handler);
-    })
-
-     // 更新people
-    $('#updatePeople').click( e => {
-        e.preventDefault();
-        let item = inits[1];
-        getDatas(item.options,item.handler);
-    }) 
 })
 // 更新数据
 function getDatas(options,type)
 {
-
     getJson(options).then( res => {
-        console.log(res);
         type.clear();  
         type.rows.add(res.result);
         type.draw(); 
@@ -321,8 +287,8 @@ function getJson(obj){
         beforeSend: function() {
             var BASEURL = '/DataCollectionSystem';
             this.url= BASEURL + this.url;
-            myalert('success', '数据发送成功');
-            if(!this.data) return;
+            myalert('success', '发送数据中');
+            if(!this.data) return; 
             this.data = (function (string) {  
                 var obj = {}, 
                     pairs = string.split('&'), 
@@ -337,7 +303,7 @@ function getJson(obj){
                 });  
                 return JSON.stringify(obj);  
             })(this.data);  
-           
+
         },
         contentType:"application/json",
         dataType: 'JSON',
@@ -362,10 +328,9 @@ function peopleDelete(name,index)
     url:'/contact/delete',
     data:data
   }).then( res => {
-      //返回错误了
-      // if(res.code == 11){
-      //   return myalert('error','删除失败!');
-      // }
+      if(res.code == 11){
+        return myalert('error','删除失败!');
+      }
       myalert('success','删除成功!');
       people.row(tr).remove().draw();
 
