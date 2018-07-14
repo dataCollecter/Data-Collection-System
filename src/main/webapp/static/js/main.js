@@ -67,9 +67,9 @@ $(function() {
 
         getJson(options)
           .then( () => {
-            window.location.href = " /";
+            window.location.href = " ./index.html";
         }).catch( () => {
-            window.location.href = " /";
+            window.location.href = " ./index.html";
         })    
       })
     
@@ -119,12 +119,7 @@ let inits = [
     {
         el:'#People',
         columns: [
-                {
-                    data:null,
-                    render:function(data,type,row,meta){
-                        return meta.row + 1 + meta.settings._iDisplayStart;  
-                    }
-                },
+
                 {
                     data:'name',
                 },
