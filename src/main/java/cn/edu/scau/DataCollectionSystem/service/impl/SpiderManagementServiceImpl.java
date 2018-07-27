@@ -82,7 +82,7 @@ public class SpiderManagementServiceImpl implements SpiderManagementService {
             fileWriter.close();
             fileWriter=new FileWriter(timing_path,true);
             PrintWriter printWriter=new PrintWriter(fileWriter);
-            printWriter.println(random.nextInt(61)+" 5 0/1 * * "+shpath);//暂定
+            printWriter.println(random.nextInt(61)+" 5 * * * "+shpath);//暂定
             printWriter.flush();
             fileWriter.flush();
             printWriter.close();

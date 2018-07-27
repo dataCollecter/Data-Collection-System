@@ -35,10 +35,12 @@ public class UserController {
     }
 
     @RequestMapping(value = "/logout")
-    public void logout(HttpSession session)
+    @ResponseBody
+    public JSONObject logout(HttpSession session)
     {
         System.out.println("clear session");
         session.removeAttribute("user");
+        return null;
     }
 
 }
