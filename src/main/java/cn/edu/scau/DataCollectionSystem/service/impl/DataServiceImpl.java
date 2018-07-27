@@ -6,6 +6,7 @@ import cn.edu.scau.DataCollectionSystem.service.DataService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Iterator;
 import java.util.List;
 
 @Service
@@ -16,9 +17,22 @@ public class DataServiceImpl implements DataService {
 
     @Override
     public List<Data> dataRequireHandler(int skip, int limit, String query) {
+        List<Data> result;
         if(query.isEmpty())
-            return getData(skip, limit);
-        return queryData(skip, limit, query);
+            return titleFilter(getData(skip, limit));
+        return titleFilter(queryData(skip, limit, query));
+    }
+
+    private List<Data> titleFilter(List<Data> dataList) {
+        Iterator<Data> i = dataList.iterator();
+        while (i.hasNext()) {
+            Data d = i.next();
+            if (d.getTitle().length() > 40)
+                d.setTitle(
+                        d.getTitle().substring(0, 39)
+                         + "...");
+        }
+        return dataList;
     }
 
     @Override
