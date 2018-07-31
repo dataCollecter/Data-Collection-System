@@ -47,12 +47,12 @@ public class SpiderController {
         String name = json.getString("name");
         String url = json.getString("url");
         String title1 = json.getString("title1");
-        String url1 = json.getString("url1");
+        String date1 = json.getString("date1");
         String title2 = json.getString("title2");
-        String url2 = json.getString("url2");
+        String date2 = json.getString("date2");
 
         JSONObject res = new JSONObject();
-        if (spiderService.createSpider(name, url, title1, url1, title2, url2)) {
+        if (spiderService.createSpider(name, url, title1, date1, title2, date2)) {
             res.put("code", 10);
         } else
             res.put("code", 11);

@@ -210,9 +210,9 @@ $(function() {
             name: inputs[0].value,
             url: inputs[1].value,
             title1: inputs[2].value,
-            url1: inputs[3].value,
+            date1: inputs[3].value,
             title2: inputs[4].value,
-            url2: inputs[5].value
+            date2: inputs[5].value
         };
         getJson({
             url: '/spider/create',

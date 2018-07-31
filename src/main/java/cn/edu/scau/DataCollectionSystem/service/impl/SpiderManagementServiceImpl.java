@@ -91,7 +91,7 @@ public class SpiderManagementServiceImpl implements SpiderManagementService {
             Runtime.getRuntime().exec(shpath);
         }catch (Exception e){
             e.printStackTrace();
-            return  false;
+            return false;
         }
 
         Date time = new Date();
