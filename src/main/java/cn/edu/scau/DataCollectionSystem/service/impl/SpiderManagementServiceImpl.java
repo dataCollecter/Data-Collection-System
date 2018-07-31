@@ -71,7 +71,7 @@ public class SpiderManagementServiceImpl implements SpiderManagementService {
 
         String shpath="/root/start_spider/"+name+".sh";
         String timing_path="/var/spool/cron/crontabs/root";
-        String body="#!/bin/sh\ncd /root/dataCollecter\nscrapy crawl test -a spider_name="+name+"\n";
+        String body="#!/bin/bash\nexport PATH=$PATH:/usr/local/bin\ncd /root/dataCollecter\nscrapy crawl test -a spider_name="+name+"\n";
         try {
             Random random=new Random();
             File file=new File(shpath);
@@ -82,7 +82,7 @@ public class SpiderManagementServiceImpl implements SpiderManagementService {
             fileWriter.close();
             fileWriter=new FileWriter(timing_path,true);
             PrintWriter printWriter=new PrintWriter(fileWriter);
-            printWriter.println(random.nextInt(61)+" 5 * * * "+shpath);//暂定
+            printWriter.println(random.nextInt(60)+" 5 * * * "+shpath);//暂定
             printWriter.flush();
             fileWriter.flush();
             printWriter.close();
